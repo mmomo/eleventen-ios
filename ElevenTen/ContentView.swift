@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    let tasks = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "dumbbell")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+                .foregroundStyle(.red)
+            Text("Training")
+                .fontWeight(.bold)
+            
+            List(tasks, id: \.self) { task in
+                 Text(task)
+               }
         }
         .padding()
     }

@@ -14,6 +14,7 @@
 		53A05E3A2B8569B800D3447B /* ElevenTenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E392B8569B800D3447B /* ElevenTenTests.swift */; };
 		53A05E442B8569B800D3447B /* ElevenTenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E432B8569B800D3447B /* ElevenTenUITests.swift */; };
 		53A05E462B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */; };
+		53B8E52B2B85745000A05D7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52A2B85745000A05D7B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		53A05E3F2B8569B800D3447B /* ElevenTenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenTenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E432B8569B800D3447B /* ElevenTenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITests.swift; sourceTree = "<group>"; };
 		53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53B8E52A2B85745000A05D7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				53A05E282B8569B700D3447B /* ElevenTenApp.swift */,
+				53B8E52A2B85745000A05D7B /* MainView.swift */,
 				53A05E2A2B8569B700D3447B /* ContentView.swift */,
 				53A05E2C2B8569B800D3447B /* Assets.xcassets */,
 				53A05E2E2B8569B800D3447B /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */,
+				53B8E52B2B85745000A05D7B /* MainView.swift in Sources */,
 				53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
