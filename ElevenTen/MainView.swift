@@ -15,7 +15,7 @@ struct MainView: View {
                     Label("Training", systemImage: "dumbbell")
                 }
             
-            Text("Clubs")
+            TrainingDetailView()
                 .tabItem {
                     Label("Clubs", systemImage: "house")
                 }

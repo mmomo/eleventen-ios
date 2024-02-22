@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let tasks = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
-
+    
     var body: some View {
         VStack {
             Image(systemName: "dumbbell")
@@ -19,8 +19,8 @@ struct ContentView: View {
                 .fontWeight(.bold)
             
             List(tasks, id: \.self) { task in
-                 Text(task)
-               }
+                Text(task)
+            }
         }
         .padding()
     }
