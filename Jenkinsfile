@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label: 'ios'
-    }
+    agent { node { label 'ios' } }
 
     stages {
         stage('Build') {
