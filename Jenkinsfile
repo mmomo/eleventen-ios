@@ -11,6 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
+                sh "bundle exec fastlane tests"
             }
         }
 
