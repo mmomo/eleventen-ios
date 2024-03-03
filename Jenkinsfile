@@ -1,10 +1,6 @@
 pipeline {
     agent { node { label 'ios' } }
 
-    environment {
-
-    }
-
     stages {
         stage('Build') {
             steps {
