@@ -23,13 +23,21 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Description of what the lane does
 
-### ios tests
+### ios unit_tests
 
 ```sh
-[bundle exec] fastlane ios tests
+[bundle exec] fastlane ios unit_tests
 ```
 
-Run unit tests
+Run Unit Tests
+
+### ios ui_tests
+
+```sh
+[bundle exec] fastlane ios ui_tests
+```
+
+Run UI Tests
 
 ----
 

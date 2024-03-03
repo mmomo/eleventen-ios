@@ -9,6 +9,34 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ElevenTenTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>ElevenTenUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>53A05E242B8569B700D3447B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53A05E342B8569B800D3447B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53A05E3E2B8569B800D3447B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

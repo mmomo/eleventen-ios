@@ -26,8 +26,32 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
 
-  desc "Run unit tests"
-  lane :tests do
-    run_tests(scheme: "ElevenTenTests")
+  desc "Run Unit Tests"
+  lane :unit_tests do
+     #run_tests(scheme: "ElevenTenTests")
+     #prelaunch_simulator: true
+     #reset_simulator: true
+     #
+     scan(
+      scheme: "ElevenTenTests",
+      xcodebuild_formatter: "xcpretty",
+      code_coverage: true,
+      output_directory: "output/test_output/unit_tests",
+      clean: true,
+      parallel_testing: false,
+      concurrent_workers: 2
+     )
+  end
+
+  desc "Run UI Tests"
+  lane :ui_tests do
+    scan(
+      scheme: "ElevenTenUITests",
+      xcodebuild_formatter: "xcpretty",
+      output_directory: "output/test_output/ui_tests",
+      clean: true,
+      parallel_testing: false,
+      concurrent_workers: 2
+)
   end
 end
