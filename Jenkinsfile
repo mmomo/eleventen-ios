@@ -26,6 +26,7 @@ pipeline {
                 echo 'Testing...'
                 sh "ruby --version && which -a ruby"
                 sh "bundle install"
+                sh "gem install fastlane"
                 sh "bundle exec fastlane unit_tests"
             }
         }
