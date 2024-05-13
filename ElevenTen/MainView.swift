@@ -8,31 +8,35 @@
 import SwiftUI
 
 struct MainView: View {
+    init() {
+    UITabBar.appearance().backgroundColor = UIColor.black
+        UITabBar.appearance().unselectedItemTintColor = UIColor.white
+    }
     var body: some View {
         TabView {
-            ContentView()
+            ProgramsListView()
                 .tabItem {
-                    Label("Training", systemImage: "dumbbell")
+                    Label("Entrenar", systemImage: "figure.racquetball")
                 }
             
-            TrainingDetailView()
+            ClubsView()
                 .tabItem {
                     Label("Clubs", systemImage: "house")
                 }
             
-            Text("Scoreboard")
+            ScoreSettingsView()
                 .tabItem {
-                    Label("Scoreboard", systemImage: "sportscourt")
+                    Label("Marcador", systemImage: "sportscourt")
                 }
             
-            Text("News")
+            Text("Noticias")
                 .tabItem {
-                    Label("News", systemImage: "newspaper")
+                    Label("Noticias", systemImage: "newspaper")
                 }
             
-            Text("Account")
+            Text("Mi Cuenta")
                 .tabItem {
-                    Label("Account", systemImage: "person.crop.circle")
+                    Label("Mi Cuenta", systemImage: "person.crop.circle")
                 }
         }
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)

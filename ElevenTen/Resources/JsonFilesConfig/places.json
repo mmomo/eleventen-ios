@@ -1,0 +1,19 @@
+[
+    {
+        "id": "1",
+        "name": "Fit Max Fitness & Racquetball",
+        "address": "Periferico de la juventud 6300-B",
+        "latitude": 28.6670698,
+        "longitude": -106.13096,
+        "imageUrl": "fitmax"
+    },
+    {
+        "id": "2",
+        "name": "Deportivo Lince",
+        "address": "Ave. Mirador #4100, Res. Campestre",
+        "latitude": 28.641168,
+        "longitude": -106.1032928,
+        "imageUrl": "lince"
+    }
+]
+

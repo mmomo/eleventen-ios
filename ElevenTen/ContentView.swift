@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    let tasks = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
+    let tasks = ["RB-Program-1.0"]
     
     var body: some View {
         VStack {
-            Image(systemName: "dumbbell")
+            Image(systemName: "figure.racquetball")
                 .imageScale(.large)
                 .foregroundStyle(.red)
             Text("Training")

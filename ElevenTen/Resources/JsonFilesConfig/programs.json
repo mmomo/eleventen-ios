@@ -1,0 +1,315 @@
+{
+  "programs": [
+    {
+      "programName": "RB-PROGRAM-1.0",
+      "duration": "2 Semanas",
+      "level": "Principiantes",
+      "days": [
+        {
+          "id": "1",
+          "dayName": "Día 1: Derecha",
+          "drills": [
+            {
+              "id": "1",
+              "type": "lista_videos",
+              "title": "A: Control",
+              "description": "",
+              "videos": [
+                {
+                  "title": "Rebotar pelota hacia abajo con raqueta",
+                  "videoUrl": "controlBotandoPelotaHaciaAbajo"
+                },
+                {
+                  "title": "Toques hacia arriba",
+                  "videoUrl": "controlToquesHaciaArriba"
+                },
+                {
+                  "title": "Cambio de cara",
+                  "videoUrl": "controlCambioDeCara"
+                },
+                {
+                  "title": "Control en corto derecha",
+                  "videoUrl": "controlEnCortoDerecha"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "type": "descripcion_video",
+              "title": "B: Refuerzo de técnica",
+              "description": "Sombras estáticas",
+              "videoUrl": "sombrasDerechaReves"
+            },
+            {
+              "id": "3",
+              "type": "descripcion_video",
+              "title": "C: Coordinación ojo-mano",
+              "description": "Descripción del Drill 3",
+              "videoUrl": "coordinacionOjoMano"
+            },
+            {
+              "id": "4",
+              "type": "titulo_descripcion_imagen",
+              "title": "D: Tiro recto derecha estático",
+              "description": "- Debes realizar tiros estáticos a diferentes distancias de la pared frontal, iniciando siempre por lo más cerca. \n -Debes intentar golpear un objetivo colocado en la pared frontal, cuidando siempre la mécanica (postura, preparación de raqueta, flexión, giro, extensión del brazo hacia el frente) esa información se encuentra disponible en la opción de B: Refuerzo de técnica.",
+              "imageUrl": "arpa1Derecha",
+              "videoUrl": "training1"
+            },
+            {
+              "id": "5",
+              "type": "titulo_descripcion_imagen",
+              "title": "E: Tiro pinch derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "6",
+              "type": "titulo_descripcion_imagen",
+              "title": "F: Tiro cruzado derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "7",
+              "type": "titulo_descripcion_imagen",
+              "title": "G: Tiro contra pinch derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "8",
+              "type": "titulo_descripcion_imagen",
+              "title": "H: Tiro wide angle derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "9",
+              "type": "titulo_descripcion_imagen",
+              "title": "I: Servicio drive a la derecha",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "10",
+              "type": "titulo_descripcion_imagen",
+              "title": "J: Control techo derecha",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "controlTechoDerecha"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "dayName": "Día 2: Revés",
+          "drills": [
+            {
+              "id": "11",
+              "type": "lista_videos",
+              "title": "A: Control",
+              "description": "",
+              "videos": [
+                {
+                  "title": "Rebotar pelota hacia abajo con raqueta",
+                  "videoUrl": "controlBotandoPelotaHaciaAbajo"
+                },
+                {
+                  "title": "Toques hacia arriba",
+                  "videoUrl": "controlToquesHaciaArriba"
+                },
+                {
+                  "title": "Cambio de cara",
+                  "videoUrl": "controlCambioDeCara"
+                },
+                {
+                  "title": "Control en corto",
+                  "videoUrl": "URL_del_video_2_para_el_Drill_2"
+                }
+              ]
+            },
+            {
+              "id": "12",
+              "type": "descripcion_video",
+              "title": "B: Refuerzo de técnica",
+              "description": "Sombras estáticas",
+              "videoUrl": "sombrasDerechaReves"
+            },
+            {
+              "id": "13",
+              "type": "descripcion_video",
+              "title": "C: Coordinación ojo-mano",
+              "description": "Lanzar la pelota hacia arriba y atraparla con la mano no dominante",
+              "videoUrl": "coordinacionOjoMano"
+            },
+            {
+              "id": "14",
+              "type": "titulo_descripcion_imagen",
+              "title": "D: Tiro recto revés estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "15",
+              "type": "titulo_descripcion_imagen",
+              "title": "E: Tiro pinch revés estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "16",
+              "type": "titulo_descripcion_imagen",
+              "title": "F: Tiro cruzado revés estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "17",
+              "type": "titulo_descripcion_imagen",
+              "title": "G: Tiro contra pinch revés estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "18",
+              "type": "titulo_descripcion_imagen",
+              "title": "H: Tiro wide angle revés estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "19",
+              "type": "titulo_descripcion_imagen",
+              "title": "I: Servicio drive a la izquierda",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "20",
+              "type": "titulo_descripcion_imagen",
+              "title": "J: Control techo derecha",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "Control techo derecha"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "dayName": "Día 3: Derecha y revés",
+          "drills": [
+            {
+              "id": "21",
+              "type": "lista_videos",
+              "title": "A: Control",
+              "description": "",
+              "videos": [
+                {
+                  "title": "Rebotar pelota hacia abajo con raqueta",
+                  "videoUrl": "controlBotandoPelotaHaciaAbajo"
+                },
+                {
+                  "title": "Toques hacia arriba",
+                  "videoUrl": "controlToquesHaciaArriba"
+                },
+                {
+                  "title": "Cambio de cara",
+                  "videoUrl": "controlCambioDeCara"
+                },
+                {
+                  "title": "Control en corto derecha",
+                  "videoUrl": "controlEnCortoDerecha"
+                },
+                {
+                  "title": "Control en corto revés",
+                  "videoUrl": "controlEnCortoReves"
+                }
+              ]
+            },
+            {
+              "id": "22",
+              "type": "descripcion_video",
+              "title": "B: Refuerzo de técnica",
+              "description": "Sombras estáticas",
+              "videoUrl": "sombrasDerechaReves"
+            },
+            {
+              "id": "23",
+              "type": "descripcion_video",
+              "title": "C: Coordinación ojo-mano",
+              "description": "Descripción del Drill 3",
+              "videoUrl": "coordinacionOjoMano"
+            },
+            {
+              "id": "24",
+              "type": "titulo_descripcion_imagen",
+              "title": "D: Tiro recto derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "25",
+              "type": "titulo_descripcion_imagen",
+              "title": "E: Tiro pinch derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "26",
+              "type": "titulo_descripcion_imagen",
+              "title": "F: Tiro cruzado derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "27",
+              "type": "titulo_descripcion_imagen",
+              "title": "G: Tiro contra pinch derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "28",
+              "type": "titulo_descripcion_imagen",
+              "title": "H: Tiro wide angle derecha estático",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "29",
+              "type": "titulo_descripcion_imagen",
+              "title": "I: Servicio drive a la derecha",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "URL_del_video_para_el_Drill_3"
+            },
+            {
+              "id": "30",
+              "type": "titulo_descripcion_imagen",
+              "title": "J: Control techo derecha",
+              "description": "Descripción del Drill 1",
+              "imageUrl": "URL_de_la_imagen_para_el_Drill_1",
+              "videoUrl": "Control techo derecha"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

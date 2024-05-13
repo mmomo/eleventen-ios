@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F02BDCB0F800F42A50 /* ProgramsListView.swift */; };
+		001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */; };
+		001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */; };
+		001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F62BDCB24F00F42A50 /* DrillDetailView.swift */; };
+		001194F92BDCB91C00F42A50 /* programs.json in Resources */ = {isa = PBXBuildFile; fileRef = 001194F82BDCB91C00F42A50 /* programs.json */; };
+		007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83052BE29CB6009E4D22 /* ProgramModel.swift */; };
+		007D83092BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83082BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 */; };
+		007D830B2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D830A2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 */; };
+		007D830D2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D830C2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 */; };
+		007D830F2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D830E2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 */; };
+		007D83112BE2C945009E4D22 /* controlEnCortoReves.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83102BE2C945009E4D22 /* controlEnCortoReves.mp4 */; };
+		007D83132BE2CD7A009E4D22 /* sombrasDerechaReves.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83122BE2CD7A009E4D22 /* sombrasDerechaReves.mp4 */; };
+		007D83152BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83142BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 */; };
+		007D831A2BE2D2D7009E4D22 /* controlTechoDerecha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83192BE2D2D7009E4D22 /* controlTechoDerecha.mp4 */; };
+		007D831C2BE2D6A1009E4D22 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 007D831B2BE2D6A1009E4D22 /* places.json */; };
+		007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D831D2BE2D7BE009E4D22 /* ClubsModel.swift */; };
+		007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D831F2BE2D82A009E4D22 /* ClubsView.swift */; };
+		007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */; };
+		007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */; };
 		53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E282B8569B700D3447B /* ElevenTenApp.swift */; };
 		53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E2A2B8569B700D3447B /* ContentView.swift */; };
 		53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2C2B8569B800D3447B /* Assets.xcassets */; };
@@ -16,7 +35,6 @@
 		53A05E462B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */; };
 		53B8E52B2B85745000A05D7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52A2B85745000A05D7B /* MainView.swift */; };
 		53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */; };
-		53B8E5312B87F3F400A05D7B /* training1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B8E5302B87F3F400A05D7B /* training1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +55,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001194F02BDCB0F800F42A50 /* ProgramsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListView.swift; sourceTree = "<group>"; };
+		001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
+		001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillsPerDayView.swift; sourceTree = "<group>"; };
+		001194F62BDCB24F00F42A50 /* DrillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillDetailView.swift; sourceTree = "<group>"; };
+		001194F82BDCB91C00F42A50 /* programs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = programs.json; sourceTree = "<group>"; };
+		007D83052BE29CB6009E4D22 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
+		007D83082BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlBotandoPelotaHaciaAbajo.mp4; sourceTree = "<group>"; };
+		007D830A2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlToquesHaciaArriba.mp4; sourceTree = "<group>"; };
+		007D830C2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlCambioDeCara.mp4; sourceTree = "<group>"; };
+		007D830E2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlEnCortoDerecha.mp4; sourceTree = "<group>"; };
+		007D83102BE2C945009E4D22 /* controlEnCortoReves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlEnCortoReves.mp4; sourceTree = "<group>"; };
+		007D83122BE2CD7A009E4D22 /* sombrasDerechaReves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sombrasDerechaReves.mp4; sourceTree = "<group>"; };
+		007D83142BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coordinacionOjoMano.mp4; sourceTree = "<group>"; };
+		007D83192BE2D2D7009E4D22 /* controlTechoDerecha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlTechoDerecha.mp4; sourceTree = "<group>"; };
+		007D831B2BE2D6A1009E4D22 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		007D831D2BE2D7BE009E4D22 /* ClubsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsModel.swift; sourceTree = "<group>"; };
+		007D831F2BE2D82A009E4D22 /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
+		007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
+		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
 		53A05E252B8569B700D3447B /* ElevenTen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenTen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E282B8569B700D3447B /* ElevenTenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenApp.swift; sourceTree = "<group>"; };
 		53A05E2A2B8569B700D3447B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +86,6 @@
 		53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53B8E52A2B85745000A05D7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
-		53B8E5302B87F3F400A05D7B /* training1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = training1.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +113,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001194EB2BDCB05F00F42A50 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				001194F02BDCB0F800F42A50 /* ProgramsListView.swift */,
+				001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */,
+				001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */,
+				001194F62BDCB24F00F42A50 /* DrillDetailView.swift */,
+				007D83052BE29CB6009E4D22 /* ProgramModel.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		001194EC2BDCB06C00F42A50 /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				007D831D2BE2D7BE009E4D22 /* ClubsModel.swift */,
+				007D831F2BE2D82A009E4D22 /* ClubsView.swift */,
+			);
+			path = Clubs;
+			sourceTree = "<group>";
+		};
+		001194ED2BDCB08700F42A50 /* ScoreBoard */ = {
+			isa = PBXGroup;
+			children = (
+				007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */,
+				007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */,
+			);
+			path = ScoreBoard;
+			sourceTree = "<group>";
+		};
+		001194EE2BDCB09600F42A50 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		001194EF2BDCB0A000F42A50 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		007D83042BE2966A009E4D22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				007D83232BE30F04009E4D22 /* JsonFilesConfig */,
+				007D83072BE2BB94009E4D22 /* videos */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		007D83072BE2BB94009E4D22 /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				007D83182BE2D075009E4D22 /* Coordinacion */,
+				007D83172BE2D060009E4D22 /* Tecnica */,
+				007D83162BE2D021009E4D22 /* Control */,
+			);
+			path = videos;
+			sourceTree = "<group>";
+		};
+		007D83162BE2D021009E4D22 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				007D83192BE2D2D7009E4D22 /* controlTechoDerecha.mp4 */,
+				007D83082BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 */,
+				007D830A2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 */,
+				007D83102BE2C945009E4D22 /* controlEnCortoReves.mp4 */,
+				007D830E2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 */,
+				007D830C2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		007D83172BE2D060009E4D22 /* Tecnica */ = {
+			isa = PBXGroup;
+			children = (
+				007D83122BE2CD7A009E4D22 /* sombrasDerechaReves.mp4 */,
+			);
+			path = Tecnica;
+			sourceTree = "<group>";
+		};
+		007D83182BE2D075009E4D22 /* Coordinacion */ = {
+			isa = PBXGroup;
+			children = (
+				007D83142BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 */,
+			);
+			path = Coordinacion;
+			sourceTree = "<group>";
+		};
+		007D83232BE30F04009E4D22 /* JsonFilesConfig */ = {
+			isa = PBXGroup;
+			children = (
+				007D831B2BE2D6A1009E4D22 /* places.json */,
+				001194F82BDCB91C00F42A50 /* programs.json */,
+			);
+			path = JsonFilesConfig;
+			sourceTree = "<group>";
+		};
 		53A05E1C2B8569B700D3447B = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +237,16 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				007D83042BE2966A009E4D22 /* Resources */,
+				001194EF2BDCB0A000F42A50 /* Account */,
+				001194EE2BDCB09600F42A50 /* News */,
+				001194ED2BDCB08700F42A50 /* ScoreBoard */,
+				001194EC2BDCB06C00F42A50 /* Clubs */,
+				001194EB2BDCB05F00F42A50 /* Training */,
 				53B8E52D2B87F15600A05D7B /* TrainingDetail */,
 				53A05E282B8569B700D3447B /* ElevenTenApp.swift */,
 				53B8E52A2B85745000A05D7B /* MainView.swift */,
 				53A05E2A2B8569B700D3447B /* ContentView.swift */,
-				53B8E5302B87F3F400A05D7B /* training1.mp4 */,
 				53A05E2C2B8569B800D3447B /* Assets.xcassets */,
 				53A05E2E2B8569B800D3447B /* Preview Content */,
 			);
@@ -248,9 +390,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53B8E5312B87F3F400A05D7B /* training1.mp4 in Resources */,
+				007D830D2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 in Resources */,
+				001194F92BDCB91C00F42A50 /* programs.json in Resources */,
+				007D83092BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 in Resources */,
+				007D831C2BE2D6A1009E4D22 /* places.json in Resources */,
 				53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */,
+				007D830F2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 in Resources */,
+				007D83152BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 in Resources */,
+				007D830B2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 in Resources */,
+				007D83112BE2C945009E4D22 /* controlEnCortoReves.mp4 in Resources */,
 				53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */,
+				007D831A2BE2D2D7009E4D22 /* controlTechoDerecha.mp4 in Resources */,
+				007D83132BE2CD7A009E4D22 /* sombrasDerechaReves.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +428,17 @@
 			files = (
 				53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */,
 				53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */,
+				007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */,
+				007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */,
+				001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */,
+				001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */,
 				53B8E52B2B85745000A05D7B /* MainView.swift in Sources */,
+				007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */,
+				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
+				001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */,
 				53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */,
+				001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */,
+				007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +602,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = VQV99RZ38F;
+				DEVELOPMENT_TEAM = 55H7L8AH3S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -477,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = VQV99RZ38F;
+				DEVELOPMENT_TEAM = 55H7L8AH3S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
