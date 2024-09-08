@@ -26,6 +26,8 @@
 		007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D831F2BE2D82A009E4D22 /* ClubsView.swift */; };
 		007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */; };
 		007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */; };
+		5308C9A62C8677D300420692 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A52C8677D300420692 /* AccountView.swift */; };
+		5308C9A82C86787C00420692 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A72C86787C00420692 /* StoreManager.swift */; };
 		53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E282B8569B700D3447B /* ElevenTenApp.swift */; };
 		53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E2A2B8569B700D3447B /* ContentView.swift */; };
 		53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2C2B8569B800D3447B /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 		53A05E462B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */; };
 		53B8E52B2B85745000A05D7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52A2B85745000A05D7B /* MainView.swift */; };
 		53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */; };
+		53BE82CA2C82D2870004F259 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,8 @@
 		007D831F2BE2D82A009E4D22 /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
 		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
+		5308C9A52C8677D300420692 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		5308C9A72C86787C00420692 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		53A05E252B8569B700D3447B /* ElevenTen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenTen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E282B8569B700D3447B /* ElevenTenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenApp.swift; sourceTree = "<group>"; };
 		53A05E2A2B8569B700D3447B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +91,8 @@
 		53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53B8E52A2B85745000A05D7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
+		53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
+		53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +160,7 @@
 		001194EF2BDCB0A000F42A50 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				5308C9A52C8677D300420692 /* AccountView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -214,6 +222,15 @@
 			path = JsonFilesConfig;
 			sourceTree = "<group>";
 		};
+		536CE0022C89189700EE7D15 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */,
+				5308C9A72C86787C00420692 /* StoreManager.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		53A05E1C2B8569B700D3447B = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +254,8 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				536CE0022C89189700EE7D15 /* Store */,
+				53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */,
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
 				001194EE2BDCB09600F42A50 /* News */,
@@ -392,6 +411,7 @@
 			files = (
 				007D830D2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 in Resources */,
 				001194F92BDCB91C00F42A50 /* programs.json in Resources */,
+				53BE82CA2C82D2870004F259 /* StoreKitTestCertificate.cer in Resources */,
 				007D83092BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 in Resources */,
 				007D831C2BE2D6A1009E4D22 /* places.json in Resources */,
 				53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */,
@@ -430,6 +450,7 @@
 				53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */,
 				007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */,
 				007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */,
+				5308C9A62C8677D300420692 /* AccountView.swift in Sources */,
 				001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */,
 				001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */,
 				53B8E52B2B85745000A05D7B /* MainView.swift in Sources */,
@@ -437,6 +458,7 @@
 				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
 				001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */,
 				53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */,
+				5308C9A82C86787C00420692 /* StoreManager.swift in Sources */,
 				001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */,
 				007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */,
 			);
@@ -599,10 +621,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = 55H7L8AH3S;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -619,6 +642,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -634,10 +658,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = 55H7L8AH3S;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -654,6 +679,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

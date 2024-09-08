@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ProgramsListView: View {
+    @EnvironmentObject var store: Store
     @State private var programs: [Program] = []
     
     var body: some View {
         NavigationView {
             VStack {
+                if store.hasActiveSubscription() {
+                    Text("Ya tienes pro!")
+                } else {
+                    Text("Free user")
+                }
+                
                 Spacer().frame(height: 16)
                 List(programs, id: \.programName) { program in
                     NavigationLink(destination: ProgramDetailView(program: program)) {
