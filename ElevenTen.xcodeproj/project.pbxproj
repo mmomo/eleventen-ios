@@ -28,6 +28,7 @@
 		007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */; };
 		5308C9A62C8677D300420692 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A52C8677D300420692 /* AccountView.swift */; };
 		5308C9A82C86787C00420692 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A72C86787C00420692 /* StoreManager.swift */; };
+		534DEFB12C8E2A6000E53EFA /* Subscriptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */; };
 		53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E282B8569B700D3447B /* ElevenTenApp.swift */; };
 		53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E2A2B8569B700D3447B /* ContentView.swift */; };
 		53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2C2B8569B800D3447B /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
 		5308C9A52C8677D300420692 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5308C9A72C86787C00420692 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Subscriptions.plist; sourceTree = "<group>"; };
 		53A05E252B8569B700D3447B /* ElevenTen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenTen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E282B8569B700D3447B /* ElevenTenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenApp.swift; sourceTree = "<group>"; };
 		53A05E2A2B8569B700D3447B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */,
 				5308C9A72C86787C00420692 /* StoreManager.swift */,
+				534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				007D831C2BE2D6A1009E4D22 /* places.json in Resources */,
 				53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */,
 				007D830F2BE2C782009E4D22 /* controlEnCortoDerecha.mp4 in Resources */,
+				534DEFB12C8E2A6000E53EFA /* Subscriptions.plist in Resources */,
 				007D83152BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 in Resources */,
 				007D830B2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 in Resources */,
 				007D83112BE2C945009E4D22 /* controlEnCortoReves.mp4 in Resources */,

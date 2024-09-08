@@ -15,17 +15,20 @@ struct AccountView: View {
         NavigationView {
             
             VStack {
-                Text("Usuario")
+                if store.hasActiveSubscription() {
+                    Text("👑 Pro user")
+                } else {
+                    Text("Free user")
+                }
                 
                 Image(systemName: "person.circle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50, height: 50)
-                                
+                          
                 Spacer()
-                StoreView(
-                    ids: ["subscription.basic", "subscription.premium"]
-                )
+                
+                StoreView(ids: store.subscriptionIDs.values)
                 .productViewStyle(.compact)
                 .storeButton(.visible, for: .restorePurchases)
             }

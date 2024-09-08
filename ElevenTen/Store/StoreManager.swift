@@ -13,9 +13,18 @@ typealias Transaction = StoreKit.Transaction
     @Published private(set) var subscriptions: [Product] = []
     @Published private(set) var activeTransactions: Set<Transaction> = []
     
+    let subscriptionIDs: [String: String]
+    
     private var updates: Task<Void, Never>?
     
     init() {
+        if let plistPath = Bundle.main.path(forResource: "Subscriptions", ofType: "plist"),
+           let plist =  FileManager.default.contents(atPath: plistPath) {
+            subscriptionIDs = (try? PropertyListSerialization.propertyList(from: plist, format: nil) as? [String: String]) ?? [:]
+        } else {
+            subscriptionIDs = [:]
+        }
+        
         updates = Task {
             for await update in Transaction.updates {
                 if let transaction = try? update.payloadValue {
@@ -32,7 +41,7 @@ typealias Transaction = StoreKit.Transaction
     
     func fetchSubscriptions() async {
         do {
-            subscriptions = try await Product.products(for: ["subscription.basic", "subscription.premium"])
+            subscriptions = try await Product.products(for: subscriptionIDs.values)
         } catch {
             subscriptions = []
         }
