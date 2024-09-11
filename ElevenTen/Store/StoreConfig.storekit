@@ -1,0 +1,137 @@
+{
+  "identifier" : "395D4702",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_billingGracePeriodEnabled" : false,
+    "_failTransactionsEnabled" : false,
+    "_locale" : "es_MX",
+    "_storefront" : "MEX",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "9AB3F617",
+      "localizations" : [
+
+      ],
+      "name" : "Subscriptions",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "129",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "A9EE0793",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "One month access to all trainings",
+              "displayName" : "Basic Subscription",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Un mes de acceso a todos los entrenamientos",
+              "displayName" : "Subscripción Básica",
+              "locale" : "es_MX"
+            }
+          ],
+          "productID" : "subscription.basic",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Basic",
+          "subscriptionGroupID" : "9AB3F617",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "299",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "5CE1285E",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "One month access to training and VIP content",
+              "displayName" : "Premium Subscription",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Acceso a entranamientos y contenido VIP",
+              "displayName" : "Subscripción Premium",
+              "locale" : "es_MX"
+            }
+          ],
+          "productID" : "subscription.premium",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Premium",
+          "subscriptionGroupID" : "9AB3F617",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

@@ -34,7 +34,7 @@ struct MainView: View {
                     Label("Noticias", systemImage: "newspaper")
                 }
             
-            Text("Mi Cuenta")
+            AccountView()
                 .tabItem {
                     Label("Mi Cuenta", systemImage: "person.crop.circle")
                 }
