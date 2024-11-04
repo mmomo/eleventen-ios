@@ -38,7 +38,6 @@
 		53A05E462B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */; };
 		53B8E52B2B85745000A05D7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52A2B85745000A05D7B /* MainView.swift */; };
 		53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */; };
-		53BE82CA2C82D2870004F259 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +92,6 @@
 		53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53B8E52A2B85745000A05D7B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
-		53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				536CE0022C89189700EE7D15 /* Store */,
-				53BE82C92C82D2870004F259 /* StoreKitTestCertificate.cer */,
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
 				001194EE2BDCB09600F42A50 /* News */,
@@ -318,6 +315,7 @@
 				53A05E212B8569B700D3447B /* Sources */,
 				53A05E222B8569B700D3447B /* Frameworks */,
 				53A05E232B8569B700D3447B /* Resources */,
+				53380C9C2CD9903200E594C3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -414,7 +412,6 @@
 			files = (
 				007D830D2BE2C4F4009E4D22 /* controlCambioDeCara.mp4 in Resources */,
 				001194F92BDCB91C00F42A50 /* programs.json in Resources */,
-				53BE82CA2C82D2870004F259 /* StoreKitTestCertificate.cer in Resources */,
 				007D83092BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 in Resources */,
 				007D831C2BE2D6A1009E4D22 /* places.json in Resources */,
 				53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */,
@@ -444,6 +441,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53380C9C2CD9903200E594C3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53A05E212B8569B700D3447B /* Sources */ = {
@@ -538,7 +557,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -601,7 +620,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
