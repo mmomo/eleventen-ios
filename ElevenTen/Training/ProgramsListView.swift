@@ -95,4 +95,3 @@ struct NavigationBarModifier: ViewModifier {
             }
     }
 }
-

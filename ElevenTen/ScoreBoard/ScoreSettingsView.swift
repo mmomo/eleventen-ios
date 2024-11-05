@@ -12,7 +12,12 @@ struct ScoreSettingsView: View {
     @State private var numberOfSets: Int = 3
     @State private var player1Name: String = ""
     @State private var player2Name: String = ""
-    @State private var instructionText: String = "Para aumentar el marcador, haz un gesto swipe hacia arriba. Para disminuir, haz un swipe hacia abajo. Para indicar quién tiene el servicio, toca el nombre del jugador."
+    @State private var instructionText: String = """
+    Para aumentar el marcador, haz un gesto swipe hacia arriba. \
+    Para disminuir, haz un swipe hacia abajo. Para indicar quién tiene el servicio, \
+    toca el nombre del jugador.
+    """
+    
     @State private var showingScoreBoard = false
 
     var body: some View {
@@ -43,19 +48,18 @@ struct ScoreSettingsView: View {
                 // Comenzar Button
                 Button(action: {
                     showingScoreBoard = true
-                }) {
+                }, label: {
                     Text("Comenzar")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.blue)
                         .cornerRadius(10)
-                }
+                })
                 .padding()
                 .fullScreenCover(isPresented: $showingScoreBoard) {
                     ScoreBoardView(player1Name: player1Name, player2Name: player2Name)
                 }
-                
                 
                 Spacer()
             }

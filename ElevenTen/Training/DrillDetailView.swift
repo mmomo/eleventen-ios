@@ -52,16 +52,13 @@ struct DrillWithImageDetailView: View {
                 }
                 .padding(.horizontal) // Agregamos padding horizontal al texto
                 
-                
                 if let imageName = drill.imageUrl {
                     Image(imageName)
                         .resizable()
                         .frame(maxWidth: .infinity)
                         .frame(height: 350)
                 }
-                
-          
-                    
+                                              
                 if let videoPath = Bundle.main.path(forResource: drill.videoUrl, ofType: "mp4") {
                     let videoURL = URL(fileURLWithPath: videoPath)
                     VideoPlayer(player: AVPlayer(url: videoURL))
@@ -74,17 +71,13 @@ struct DrillWithImageDetailView: View {
     }
 }
 
-
-
-
-
 struct VideoPlayerView: View {
     var videoURL: String
     var videoTitle: String
     var videoDescription: String?
     
     var body: some View {
-        VStack{
+        VStack {
             Text(videoDescription ?? "")
             if let videoPath = Bundle.main.path(forResource: videoURL, ofType: "mp4") {
                 let videoURL = URL(fileURLWithPath: videoPath)

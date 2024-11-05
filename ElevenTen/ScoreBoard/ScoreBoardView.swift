@@ -53,14 +53,14 @@ struct ScoreBoardView: View {
                         selectedPlayer = 1
                         isPlayer1Serving = true
                         isPlayer2Serving = false
-                    }) {
+                    }, label: {
                         Text(player1Name)
                             .font(.title) // Aumenta el tamaño del texto
                             .padding()
                             .background(selectedPlayer == 1 ? Color.blue : Color.gray)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                    }
+                    })
                     .overlay(
                         Image(systemName: "circle.fill")
                             .foregroundColor(isPlayer1Serving ? .green : .clear)
@@ -99,14 +99,14 @@ struct ScoreBoardView: View {
                         selectedPlayer = 2
                         isPlayer1Serving = false
                         isPlayer2Serving = true
-                    }) {
+                    }, label: {
                         Text(player2Name)
                             .font(.title) // Aumenta el tamaño del texto
                             .padding()
                             .background(selectedPlayer == 2 ? Color.blue : Color.gray)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                    }
+                    })
                     .overlay(
                         Image(systemName: "circle.fill")
                             .foregroundColor(isPlayer2Serving ? .green : .clear)
@@ -149,4 +149,3 @@ struct ScoreBoardView: View {
         })
     }
 }
-

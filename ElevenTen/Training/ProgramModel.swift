@@ -50,7 +50,6 @@ struct Drill: Identifiable, Codable, Hashable, Equatable {
       }
 }
 
-
 struct Video: Codable {
     let title: String
     let videoUrl: String

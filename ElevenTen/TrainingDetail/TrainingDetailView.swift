@@ -28,7 +28,7 @@ struct TrainingDetailView: View {
                 
                 Spacer().frame(height: 20)
                 
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus eget arcu iaculis fermentum. Cras rhoncus ex eget neque suscipit.")
+                Text("Training Description.")
                     .padding()
                 
                 Spacer()
