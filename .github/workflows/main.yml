@@ -1,0 +1,23 @@
+name: CI/CD for ElevenTen
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run test
+        run: |
+          xcodebuild test\
+            -scheme 'ElevenTenTests'
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.1'
