@@ -18,6 +18,4 @@ jobs:
 
       - name: Run test
         run: |
-          xcodebuild test\
-            -scheme 'ElevenTen'
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.1'
+           xcodebuild test -scheme 'ElevenTenTests' -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.1'
