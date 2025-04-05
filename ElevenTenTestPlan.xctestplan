@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "66785C1B-CB0B-47EE-B97C-046E6E879828",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ElevenTen.xcodeproj",
+        "identifier" : "53A05E342B8569B800D3447B",
+        "name" : "ElevenTenTests"
+      }
+    }
+  ],
+  "version" : 1
+}
