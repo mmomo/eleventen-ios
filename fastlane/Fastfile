@@ -15,13 +15,12 @@ platform :ios do
      scan(
       scheme: "ElevenTen",
       testplan: "ElevenTenTestPlan",
+      xcodebuild_formatter: "xcpretty",
       clean: true,
       reset_simulator: true,
       code_coverage: true,
       output_directory: "fastlane/test_output",
-      output_types: "junit,html",
-      fail_build: true,
-      xcpretty_args: "--utf"
+      fail_build: true
     )
   end
 

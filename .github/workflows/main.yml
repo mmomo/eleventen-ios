@@ -18,3 +18,9 @@ jobs:
 
       - name: Run unit tests
         run: fastlane unit_tests
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: unit-test-report
+          path: fastlane/test_output/
