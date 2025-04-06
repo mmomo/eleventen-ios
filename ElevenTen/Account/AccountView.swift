@@ -9,14 +9,14 @@ import SwiftUI
 import StoreKit
 
 struct AccountView: View {
-    @EnvironmentObject var store: Store
+    @ObservedObject var store: Store
     
     var body: some View {
         NavigationView {
             
             VStack {
                 if store.hasActiveSubscription() {
-                    Text("👑 Pro user")
+                    Text("Pro user")
                 } else {
                     Text("Free user")
                 }
@@ -25,12 +25,12 @@ struct AccountView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50, height: 50)
-                          
+                
                 Spacer()
                 
                 StoreView(ids: store.subscriptionIDs.values)
-                .productViewStyle(.compact)
-                .storeButton(.visible, for: .restorePurchases)
+                    .productViewStyle(.compact)
+                    .storeButton(.visible, for: .restorePurchases)
             }
             
             .navigationBarTitle(Text("Cuenta"), displayMode: .inline)
@@ -41,5 +41,5 @@ struct AccountView: View {
 }
 
 #Preview {
-    AccountView()
+    AccountView(store: Store())
 }

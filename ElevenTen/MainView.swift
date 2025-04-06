@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
-    init() {
-    UITabBar.appearance().backgroundColor = UIColor.black
+    @ObservedObject var store: Store
+
+    init(store: Store) {
+        UITabBar.appearance().backgroundColor = UIColor.black
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
+        
+        self.store = store
     }
+    
     var body: some View {
         TabView {
-            ProgramsListView()
+            ProgramsListView(store: store)
                 .tabItem {
                     Label("Entrenar", systemImage: "figure.racquetball")
                 }
@@ -34,7 +39,7 @@ struct MainView: View {
                     Label("Noticias", systemImage: "newspaper")
                 }
             
-            AccountView()
+            AccountView(store: store)
                 .tabItem {
                     Label("Mi Cuenta", systemImage: "person.crop.circle")
                 }
@@ -44,5 +49,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView().menuOrder(.automatic)
+    MainView(store: Store()).menuOrder(.automatic)
 }

@@ -26,6 +26,8 @@
 		007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D831F2BE2D82A009E4D22 /* ClubsView.swift */; };
 		007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */; };
 		007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */; };
+		530057952DA1A0260091105B /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 530057942DA1A0260091105B /* ViewInspector */; };
+		530057992DA1A0730091105B /* AccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530057982DA1A0730091105B /* AccountViewTests.swift */; };
 		5308C9A62C8677D300420692 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A52C8677D300420692 /* AccountView.swift */; };
 		5308C9A82C86787C00420692 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A72C86787C00420692 /* StoreManager.swift */; };
 		534DEFB12C8E2A6000E53EFA /* Subscriptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */; };
@@ -33,7 +35,6 @@
 		53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E2A2B8569B700D3447B /* ContentView.swift */; };
 		53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2C2B8569B800D3447B /* Assets.xcassets */; };
 		53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2F2B8569B800D3447B /* Preview Assets.xcassets */; };
-		53A05E3A2B8569B800D3447B /* ElevenTenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E392B8569B800D3447B /* ElevenTenTests.swift */; };
 		53A05E442B8569B800D3447B /* ElevenTenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E432B8569B800D3447B /* ElevenTenUITests.swift */; };
 		53A05E462B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */; };
 		53B8E52B2B85745000A05D7B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8E52A2B85745000A05D7B /* MainView.swift */; };
@@ -77,6 +78,7 @@
 		007D831F2BE2D82A009E4D22 /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
 		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
+		530057982DA1A0730091105B /* AccountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewTests.swift; sourceTree = "<group>"; };
 		53025F6E2DA0CAA300A786BE /* ElevenTenTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ElevenTenTestPlan.xctestplan; sourceTree = "<group>"; };
 		5308C9A52C8677D300420692 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5308C9A72C86787C00420692 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 		53A05E2C2B8569B800D3447B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A05E2F2B8569B800D3447B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53A05E352B8569B800D3447B /* ElevenTenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenTenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53A05E392B8569B800D3447B /* ElevenTenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenTests.swift; sourceTree = "<group>"; };
 		53A05E3F2B8569B800D3447B /* ElevenTenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenTenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E432B8569B800D3447B /* ElevenTenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITests.swift; sourceTree = "<group>"; };
 		53A05E452B8569B800D3447B /* ElevenTenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530057952DA1A0260091105B /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +287,7 @@
 		53A05E382B8569B800D3447B /* ElevenTenTests */ = {
 			isa = PBXGroup;
 			children = (
-				53A05E392B8569B800D3447B /* ElevenTenTests.swift */,
+				530057982DA1A0730091105B /* AccountViewTests.swift */,
 			);
 			path = ElevenTenTests;
 			sourceTree = "<group>";
@@ -396,6 +398,9 @@
 				Base,
 			);
 			mainGroup = 53A05E1C2B8569B700D3447B;
+			packageReferences = (
+				530057932DA1A0260091105B /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 53A05E262B8569B700D3447B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -493,7 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53A05E3A2B8569B800D3447B /* ElevenTenTests.swift in Sources */,
+				530057992DA1A0730091105B /* AccountViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +844,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		530057932DA1A0260091105B /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		530057942DA1A0260091105B /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 530057932DA1A0260091105B /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53A05E1D2B8569B700D3447B /* Project object */;
 }

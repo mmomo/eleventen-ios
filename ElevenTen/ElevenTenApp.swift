@@ -21,12 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 struct ElevenTenApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject private var store = Store()
+    
+    @ObservedObject var store: Store = Store()
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(store)
+            MainView(store: store)
                 .task(id: scenePhase) {
                     if scenePhase == .active {
                         await store.fetchActiveTransactions()

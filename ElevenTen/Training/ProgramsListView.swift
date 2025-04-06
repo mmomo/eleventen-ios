@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgramsListView: View {
-    @EnvironmentObject var store: Store
+    @ObservedObject var store: Store
     @State private var programs: [Program] = []
     
     var body: some View {

@@ -9,7 +9,7 @@ import StoreKit
 
 typealias Transaction = StoreKit.Transaction
 
-@MainActor final class Store: ObservableObject {
+@MainActor class Store: ObservableObject {
     @Published private(set) var subscriptions: [Product] = []
     @Published private(set) var activeTransactions: Set<Transaction> = []
     
