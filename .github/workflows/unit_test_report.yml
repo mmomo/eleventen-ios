@@ -1,12 +1,20 @@
-name: Unit Tests
+name: Unit Tests Report
 
 on:
   push:
     branches:
       - main
+      
   pull_request:
     branches:
       - main
+      
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'App Version'
+        required: false
+        default: '1.0.0'
 
 jobs:
   unit_test:
