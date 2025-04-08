@@ -79,7 +79,7 @@ struct CellView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image("racquetball_program3")
+            Image("racquetball_program")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipped()
@@ -113,7 +113,7 @@ struct WorkoutMiniView: View {
     
     var body: some View {
         HStack {
-            Image("racquetball_program")
+            Image("racquetball_man")
                 .resizable()
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .frame(width: 60, height: 60)
