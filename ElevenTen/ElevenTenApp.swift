@@ -25,16 +25,7 @@ struct ElevenTenApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(store)
-                .task(id: scenePhase) {
-                    if scenePhase == .active {
-                        await store.fetchActiveTransactions()
-                    }
-                }
-                .accentColor(Color(red: 189.0/255.0, green: 53.0/255.0, blue: 40.0/255.0))
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarColor(backgroundColor: Color.black, tintColor: Color(red: 189.0/255.0, green: 53.0/255.0, blue: 40.0/255.0))
+            LogInView()
         }
     }
 }

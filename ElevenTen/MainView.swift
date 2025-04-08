@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     init() {
-    UITabBar.appearance().backgroundColor = UIColor.black
+        UITabBar.appearance().backgroundColor = UIColor.black
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
     }
     var body: some View {

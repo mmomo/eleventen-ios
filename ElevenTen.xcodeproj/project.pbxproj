@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -77,6 +77,7 @@
 		007D831F2BE2D82A009E4D22 /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
 		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
+		00C213292D83B957000FE845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5308C9A52C8677D300420692 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5308C9A72C86787C00420692 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Subscriptions.plist; sourceTree = "<group>"; };
@@ -94,6 +95,11 @@
 		53B8E52E2B87F18500A05D7B /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
 		53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		008CB4BA2D7A7E0F00ABA002 /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
+		008CB4BE2D7A7F4F00ABA002 /* Main */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Main; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		53A05E222B8569B700D3447B /* Frameworks */ = {
@@ -148,13 +154,6 @@
 				007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */,
 			);
 			path = ScoreBoard;
-			sourceTree = "<group>";
-		};
-		001194EE2BDCB09600F42A50 /* News */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = News;
 			sourceTree = "<group>";
 		};
 		001194EF2BDCB0A000F42A50 /* Account */ = {
@@ -255,10 +254,12 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				00C213292D83B957000FE845 /* Info.plist */,
+				008CB4BE2D7A7F4F00ABA002 /* Main */,
+				008CB4BA2D7A7E0F00ABA002 /* Login */,
 				536CE0022C89189700EE7D15 /* Store */,
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
-				001194EE2BDCB09600F42A50 /* News */,
 				001194ED2BDCB08700F42A50 /* ScoreBoard */,
 				001194EC2BDCB06C00F42A50 /* Clubs */,
 				001194EB2BDCB05F00F42A50 /* Training */,
@@ -320,6 +321,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				008CB4BA2D7A7E0F00ABA002 /* Login */,
+				008CB4BE2D7A7F4F00ABA002 /* Main */,
 			);
 			name = ElevenTen;
 			productName = ElevenTen;
@@ -648,9 +653,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElevenTen/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -685,9 +691,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElevenTen/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
