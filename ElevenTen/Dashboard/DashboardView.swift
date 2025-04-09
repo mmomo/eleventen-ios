@@ -11,65 +11,71 @@ struct DashboardView: View {
     @ObservedObject var viewModel: DashboardViewModel
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Spacer().frame(height: 5.0)
-                
-                HStack {
-                    Text("Welcome {{user}} 👋")
-                    Spacer()
-                }
-                
-                Spacer().frame(height: 25.0)
-                
-                if let currentProgram = viewModel.currentProgram {
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    Spacer().frame(height: 5.0)
+                    
                     HStack {
-                        Text("Continue")
+                        Text("Welcome {{user}} 👋")
+                        Spacer()
+                    }
+                    
+                    Spacer().frame(height: 25.0)
+                    
+                    if let currentProgram = viewModel.currentProgram {
+                        
+                        HStack {
+                            Text("Continue")
+                                .fontWeight(.heavy)
+                            Spacer()
+                        }
+                        
+                        NavigationLink(destination: ProgramDetailView(program: currentProgram)) {
+                            HStack {
+                                CellView(program: currentProgram)
+                                    .frame(width: 300, height: 250)
+                                Spacer()
+                            }
+                        }
+                    }
+                    
+                    Spacer().frame(height: 25)
+                    
+                    HStack {
+                        Text("Programs")
                             .fontWeight(.heavy)
                         Spacer()
                     }
-                    HStack {
-                        CellView(program: currentProgram)
-                            .frame(width: 300, height: 250)
-                        Spacer()
-                    }
-                }
-                
-                Spacer().frame(height: 25)
-                
-                HStack {
-                    Text("Programs")
-                        .fontWeight(.heavy)
-                    Spacer()
-                }
-                
-                Text("Created to help you improve your racquet skills and prepare for new challenges.").italic()
-                
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(viewModel.programs, id: \.programName) { program in
-                            CellView(program: program)
-                                .frame(width: 200, height: 150)
+                    
+                    Text("Created to help you improve your racquet skills and prepare for new challenges.").italic()
+                    
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(viewModel.programs, id: \.programName) { program in
+                                CellView(program: program)
+                                    .frame(width: 200, height: 150)
+                            }
                         }
                     }
-                }
-                
-                Spacer().frame(height: 25)
-                
-                HStack {
-                    Text("Workouts")
-                        .fontWeight(.heavy)
+                    
+                    Spacer().frame(height: 25)
+                    
+                    HStack {
+                        Text("Workouts")
+                            .fontWeight(.heavy)
+                        Spacer()
+                    }
+                    
+                    ForEach(viewModel.getDrillsForToday().prefix(5), id: \.id) { drill in
+                        WorkoutMiniView(drill: drill)
+                    }
+                    
                     Spacer()
-                }
-                
-                ForEach(viewModel.getDrillsForToday().prefix(5), id: \.id) { drill in
-                    WorkoutMiniView(drill: drill)
-                }
-               
-                Spacer()
-                
-            }.padding()
-                .background(Color.clear)
+                    
+                }.padding()
+                    .background(Color.clear)
+            }
         }
     }
 }
