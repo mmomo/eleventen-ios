@@ -19,7 +19,7 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            ProgramsListView(store: store)
+            DashboardView(viewModel: DashboardViewModel())
                 .tabItem {
                     Label("Entrenar", systemImage: "figure.racquetball")
                 }
