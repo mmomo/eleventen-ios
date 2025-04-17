@@ -31,11 +31,14 @@
 		00E06AAF2DA86EA3008F342A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00600B652DA4B20400224282 /* ScoreViewModel.swift */; };
 		530057952DA1A0260091105B /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 530057942DA1A0260091105B /* ViewInspector */; };
 		530057992DA1A0730091105B /* AccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530057982DA1A0730091105B /* AccountViewTests.swift */; };
+		5300579C2DA2526A0091105B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5300579B2DA2526A0091105B /* DashboardView.swift */; };
 		5308C9A62C8677D300420692 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A52C8677D300420692 /* AccountView.swift */; };
 		5308C9A82C86787C00420692 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A72C86787C00420692 /* StoreManager.swift */; };
 		534DEFB12C8E2A6000E53EFA /* Subscriptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */; };
+		5352D98A2DA3751A00E2D5E5 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5352D9892DA3751A00E2D5E5 /* DashboardViewModel.swift */; };
+		5352D98C2DA37F0C00E2D5E5 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5352D98B2DA37F0C00E2D5E5 /* DashboardViewModelTests.swift */; };
+		5352D98E2DA3813B00E2D5E5 /* DashboardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5352D98D2DA3813B00E2D5E5 /* DashboardViewTests.swift */; };
 		53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E282B8569B700D3447B /* ElevenTenApp.swift */; };
-		53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E2A2B8569B700D3447B /* ContentView.swift */; };
 		53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2C2B8569B800D3447B /* Assets.xcassets */; };
 		53A05E302B8569B800D3447B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A05E2F2B8569B800D3447B /* Preview Assets.xcassets */; };
 		53A05E442B8569B800D3447B /* ElevenTenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A05E432B8569B800D3447B /* ElevenTenUITests.swift */; };
@@ -105,13 +108,16 @@
 		007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
 		007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSettingsView.swift; sourceTree = "<group>"; };
 		530057982DA1A0730091105B /* AccountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewTests.swift; sourceTree = "<group>"; };
+		5300579B2DA2526A0091105B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		53025F6E2DA0CAA300A786BE /* ElevenTenTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ElevenTenTestPlan.xctestplan; sourceTree = "<group>"; };
 		5308C9A52C8677D300420692 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5308C9A72C86787C00420692 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		534DEFB02C8E2A6000E53EFA /* Subscriptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Subscriptions.plist; sourceTree = "<group>"; };
+		5352D9892DA3751A00E2D5E5 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		5352D98B2DA37F0C00E2D5E5 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		5352D98D2DA3813B00E2D5E5 /* DashboardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewTests.swift; sourceTree = "<group>"; };
 		53A05E252B8569B700D3447B /* ElevenTen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenTen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A05E282B8569B700D3447B /* ElevenTenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenTenApp.swift; sourceTree = "<group>"; };
-		53A05E2A2B8569B700D3447B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53A05E2C2B8569B800D3447B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A05E2F2B8569B800D3447B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53A05E352B8569B800D3447B /* ElevenTenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenTenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +269,15 @@
 			path = JsonFilesConfig;
 			sourceTree = "<group>";
 		};
+		5300579A2DA252450091105B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				5300579B2DA2526A0091105B /* DashboardView.swift */,
+				5352D9892DA3751A00E2D5E5 /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		536CE0022C89189700EE7D15 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +317,7 @@
 				536CE0022C89189700EE7D15 /* Store */,
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
+				5300579A2DA252450091105B /* Dashboard */,
 				001194EE2BDCB09600F42A50 /* News */,
 				001194ED2BDCB08700F42A50 /* ScoreBoard */,
 				001194EC2BDCB06C00F42A50 /* Clubs */,
@@ -309,7 +325,6 @@
 				53B8E52D2B87F15600A05D7B /* TrainingDetail */,
 				53A05E282B8569B700D3447B /* ElevenTenApp.swift */,
 				53B8E52A2B85745000A05D7B /* MainView.swift */,
-				53A05E2A2B8569B700D3447B /* ContentView.swift */,
 				53A05E2C2B8569B800D3447B /* Assets.xcassets */,
 				53A05E2E2B8569B800D3447B /* Preview Content */,
 			);
@@ -328,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				530057982DA1A0730091105B /* AccountViewTests.swift */,
+				5352D98B2DA37F0C00E2D5E5 /* DashboardViewModelTests.swift */,
+				5352D98D2DA3813B00E2D5E5 /* DashboardViewTests.swift */,
 			);
 			path = ElevenTenTests;
 			sourceTree = "<group>";
@@ -559,7 +576,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53A05E2B2B8569B700D3447B /* ContentView.swift in Sources */,
 				53B8E52F2B87F18500A05D7B /* TrainingDetailView.swift in Sources */,
 				007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */,
 				007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */,
@@ -568,6 +584,8 @@
 				001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */,
 				00600B662DA4B20800224282 /* ScoreViewModel.swift in Sources */,
 				53B8E52B2B85745000A05D7B /* MainView.swift in Sources */,
+				5352D98A2DA3751A00E2D5E5 /* DashboardViewModel.swift in Sources */,
+				5300579C2DA2526A0091105B /* DashboardView.swift in Sources */,
 				007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */,
 				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
 				001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */,
@@ -583,6 +601,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				530057992DA1A0730091105B /* AccountViewTests.swift in Sources */,
+				5352D98C2DA37F0C00E2D5E5 /* DashboardViewModelTests.swift in Sources */,
+				5352D98E2DA3813B00E2D5E5 /* DashboardViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
