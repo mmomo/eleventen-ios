@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */; };
 		001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F62BDCB24F00F42A50 /* DrillDetailView.swift */; };
 		001194F92BDCB91C00F42A50 /* programs.json in Resources */ = {isa = PBXBuildFile; fileRef = 001194F82BDCB91C00F42A50 /* programs.json */; };
+		00600B602DA4B16000224282 /* ElevenTenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 00600B532DA4B15C00224282 /* ElevenTenWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		00600B662DA4B20800224282 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00600B652DA4B20400224282 /* ScoreViewModel.swift */; };
 		007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83052BE29CB6009E4D22 /* ProgramModel.swift */; };
 		007D83092BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D83082BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 */; };
 		007D830B2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 007D830A2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 */; };
@@ -26,6 +28,7 @@
 		007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D831F2BE2D82A009E4D22 /* ClubsView.swift */; };
 		007D83222BE2FE66009E4D22 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */; };
 		007D83252BE30F77009E4D22 /* ScoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */; };
+		00E06AAF2DA86EA3008F342A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00600B652DA4B20400224282 /* ScoreViewModel.swift */; };
 		530057952DA1A0260091105B /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 530057942DA1A0260091105B /* ViewInspector */; };
 		530057992DA1A0730091105B /* AccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530057982DA1A0730091105B /* AccountViewTests.swift */; };
 		5308C9A62C8677D300420692 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308C9A52C8677D300420692 /* AccountView.swift */; };
@@ -42,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		00600B5E2DA4B16000224282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53A05E1D2B8569B700D3447B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00600B522DA4B15C00224282;
+			remoteInfo = "ElevenTenWatch Watch App";
+		};
 		53A05E362B8569B800D3447B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53A05E1D2B8569B700D3447B /* Project object */;
@@ -58,12 +68,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00600B612DA4B16000224282 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				00600B602DA4B16000224282 /* ElevenTenWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		001194F02BDCB0F800F42A50 /* ProgramsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListView.swift; sourceTree = "<group>"; };
 		001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
 		001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillsPerDayView.swift; sourceTree = "<group>"; };
 		001194F62BDCB24F00F42A50 /* DrillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillDetailView.swift; sourceTree = "<group>"; };
 		001194F82BDCB91C00F42A50 /* programs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = programs.json; sourceTree = "<group>"; };
+		00600B532DA4B15C00224282 /* ElevenTenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ElevenTenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00600B652DA4B20400224282 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 		007D83052BE29CB6009E4D22 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		007D83082BE2BBAF009E4D22 /* controlBotandoPelotaHaciaAbajo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlBotandoPelotaHaciaAbajo.mp4; sourceTree = "<group>"; };
 		007D830A2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = controlToquesHaciaArriba.mp4; sourceTree = "<group>"; };
@@ -97,7 +123,18 @@
 		53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "ElevenTenWatch Watch App"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		00600B502DA4B15C00224282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A05E222B8569B700D3447B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +184,7 @@
 		001194ED2BDCB08700F42A50 /* ScoreBoard */ = {
 			isa = PBXGroup;
 			children = (
+				00600B652DA4B20400224282 /* ScoreViewModel.swift */,
 				007D83212BE2FE66009E4D22 /* ScoreBoardView.swift */,
 				007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */,
 			);
@@ -242,6 +280,7 @@
 				53A05E272B8569B700D3447B /* ElevenTen */,
 				53A05E382B8569B800D3447B /* ElevenTenTests */,
 				53A05E422B8569B800D3447B /* ElevenTenUITests */,
+				00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */,
 				53A05E262B8569B700D3447B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -252,6 +291,7 @@
 				53A05E252B8569B700D3447B /* ElevenTen.app */,
 				53A05E352B8569B800D3447B /* ElevenTenTests.xctest */,
 				53A05E3F2B8569B800D3447B /* ElevenTenUITests.xctest */,
+				00600B532DA4B15C00224282 /* ElevenTenWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +352,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00600B642DA4B16000224282 /* Build configuration list for PBXNativeTarget "ElevenTenWatch Watch App" */;
+			buildPhases = (
+				00600B4F2DA4B15C00224282 /* Sources */,
+				00600B502DA4B15C00224282 /* Frameworks */,
+				00600B512DA4B15C00224282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */,
+			);
+			name = "ElevenTenWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "ElevenTenWatch Watch App";
+			productReference = 00600B532DA4B15C00224282 /* ElevenTenWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		53A05E242B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A05E492B8569B800D3447B /* Build configuration list for PBXNativeTarget "ElevenTen" */;
@@ -320,10 +382,12 @@
 				53A05E222B8569B700D3447B /* Frameworks */,
 				53A05E232B8569B700D3447B /* Resources */,
 				53380C9C2CD9903200E594C3 /* SwiftLint */,
+				00600B612DA4B16000224282 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				00600B5F2DA4B16000224282 /* PBXTargetDependency */,
 			);
 			name = ElevenTen;
 			productName = ElevenTen;
@@ -373,9 +437,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					00600B522DA4B15C00224282 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					53A05E242B8569B700D3447B = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -408,11 +475,19 @@
 				53A05E242B8569B700D3447B /* ElevenTen */,
 				53A05E342B8569B800D3447B /* ElevenTenTests */,
 				53A05E3E2B8569B800D3447B /* ElevenTenUITests */,
+				00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00600B512DA4B15C00224282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A05E232B8569B700D3447B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +547,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00600B4F2DA4B15C00224282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E06AAF2DA86EA3008F342A /* ScoreViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A05E212B8569B700D3447B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +566,7 @@
 				5308C9A62C8677D300420692 /* AccountView.swift in Sources */,
 				001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */,
 				001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */,
+				00600B662DA4B20800224282 /* ScoreViewModel.swift in Sources */,
 				53B8E52B2B85745000A05D7B /* MainView.swift in Sources */,
 				007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */,
 				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
@@ -514,6 +598,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		00600B5F2DA4B16000224282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */;
+			targetProxy = 00600B5E2DA4B16000224282 /* PBXContainerItemProxy */;
+		};
 		53A05E372B8569B800D3447B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53A05E242B8569B700D3447B /* ElevenTen */;
@@ -527,6 +616,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		00600B622DA4B16000224282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ElevenTenWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = W89YVYQENL;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ElevenTenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = eleventen.inc.app.ElevenTen;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		00600B632DA4B16000224282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ElevenTenWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = W89YVYQENL;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ElevenTenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = eleventen.inc.app.ElevenTen;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		53A05E472B8569B800D3447B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -655,7 +808,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -692,7 +845,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ElevenTen/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -807,6 +960,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00600B642DA4B16000224282 /* Build configuration list for PBXNativeTarget "ElevenTenWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00600B622DA4B16000224282 /* Debug */,
+				00600B632DA4B16000224282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		53A05E202B8569B700D3447B /* Build configuration list for PBXProject "ElevenTen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
