@@ -1,25 +1,14 @@
-//
-//  ElevenTenWatchApp.swift
-//  ElevenTenWatch Watch App
-//
-//  Created by Jorge Romo on 07/04/25.
-//
-
 import SwiftUI
-import WatchConnectivity
 
 @main
-struct ElevenTenWatch_Watch_AppApp: App {
-
-    init() {
-        WatchSessionManager.shared.activate()
-    }
-
+struct ElevenTen_Watch_App: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                WatchScoreView()
-            }
+            WatchScoreView()
+                .onOpenURL { url in
+                    print("✅ App abierta desde complication con URL: \(url.absoluteString)")
+                    // Puedes agregar lógica aquí si en el futuro manejas rutas diferentes
+                }
         }
     }
 }

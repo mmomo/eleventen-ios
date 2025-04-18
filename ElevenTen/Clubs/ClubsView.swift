@@ -5,55 +5,66 @@ struct ClubsView: View {
     @State private var racquetballPlaces = [PlaceAnnotation]()
     @State private var selectedPlace: PlaceAnnotation?
     @State private var showingMap = false
-    
+
     var body: some View {
         NavigationView {
-            VStack {
-                List(racquetballPlaces) { place in
-                    HStack {
-                        Image(place.imageUrl) //
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: 50) // Ajusta el tamaño de la imagen según sea necesario.
-                        
-                        VStack(alignment: .leading) {
-                            Text(place.name)
-                                .font(.headline)
-                            Text(place.address)
-                                .font(.subheadline)
+            ZStack {
+                Color.brandLightBackground.ignoresSafeArea()
+
+                VStack(spacing: 16) {
+                    List(racquetballPlaces) { place in
+                        HStack(spacing: 12) {
+                            Image(place.imageUrl)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 50, height: 50)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(place.name)
+                                    .font(.headline)
+                                    .foregroundColor(.brandText)
+                                Text(place.address)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
                         }
-                        .padding(.vertical)
+                        .padding(.vertical, 8)
+                        .listRowBackground(Color.clear)
+                        .onTapGesture {
+                            // Acción futura
+                        }
                     }
-                    .onTapGesture {
-                        
+                    .listStyle(.plain)
+                    .background(Color.clear)
+
+                    Button(action: {
+                        showingMap = true
+                    }, label: {
+                        Text("Ver Mapa")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.brandRed)
+                            .cornerRadius(12)
+                    })
+                    .padding(.horizontal)
+                    .sheet(isPresented: $showingMap) {
+                        MapView(places: racquetballPlaces, selectedPlace: $selectedPlace) {
+                            showingMap = false
+                        }
                     }
                 }
-                
-                Button(action: {
-                    showingMap = true
-                }, label: {
-                    Text("Ver Mapa")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })
-                .padding()
-                .sheet(isPresented: $showingMap) {
-                    MapView(places: racquetballPlaces, selectedPlace: $selectedPlace) {
-                        showingMap = false // Close the sheet
-                    }
-                }
+                .padding(.top)
             }
-            .navigationBarTitle(Text("¿Dónde practicar?"), displayMode: .inline)
+            .navigationTitle("¿Dónde practicar?")
             .onAppear {
                 loadPlacesFromJSON()
             }
         }
     }
-    
-    // Function to load racquetball places from JSON
+
     func loadPlacesFromJSON() {
         if let url = Bundle.main.url(forResource: "places", withExtension: "json") {
             do {
@@ -71,43 +82,40 @@ struct MapView: View {
     var places: [PlaceAnnotation]
     @Binding var selectedPlace: PlaceAnnotation?
     @State var position = MapCameraPosition.automatic
-    
     var onClose: () -> Void
-    
+
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            
-            Map(initialPosition: position) {
+            Map(position: $position) {
                 ForEach(places) { place in
                     Annotation(place.name, coordinate: place.coordinate) {
                         Button(action: {
                             selectedPlace = place
-                        }, label: {
+                        }) {
                             Image(systemName: "figure.racquetball")
                                 .foregroundColor(.red)
                                 .font(.title)
-                        })
+                        }
                     }
-                    
                 }
+            }
+            .ignoresSafeArea()
+
+            Button(action: {
+                onClose()
+            }) {
+                Image(systemName: "xmark.circle.fill")
+                    .foregroundColor(.red)
+                    .font(.title)
+                    .padding()
             }
         }
         .alert(item: $selectedPlace) { place in
-            Alert(title: Text(place.name),
-                  message: Text(place.address),
-                  primaryButton: .default(Text("Abrir en Mapas"), action: {
-            }),
-                  secondaryButton: .default(Text("OK")))
+            Alert(
+                title: Text(place.name),
+                message: Text(place.address),
+                dismissButton: .default(Text("OK"))
+            )
         }
-        .navigationTitle("Map")
-        Button(action: {
-            onClose()
-        }, label: {
-            Image(systemName: "xmark.circle.fill")
-                .foregroundColor(.red)
-                .font(.title)
-                .padding()
-        })
-        .padding()
     }
 }
