@@ -2,81 +2,67 @@ import SwiftUI
 import MapKit
 
 struct ClubsView: View {
-    @State private var racquetballPlaces = [PlaceAnnotation]()
+    @StateObject private var viewModel = ClubsViewModel()
     @State private var selectedPlace: PlaceAnnotation?
     @State private var showingMap = false
 
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.brandLightBackground.ignoresSafeArea()
-
-                VStack(spacing: 16) {
-                    List(racquetballPlaces) { place in
-                        HStack(spacing: 12) {
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Cargando clubes...")
+                        .padding()
+                } else if let error = viewModel.errorMessage {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .padding()
+                } else {
+                    List(viewModel.racquetballPlaces) { place in
+                        HStack {
                             Image(place.imageUrl)
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: 50, height: 50)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
 
-                            VStack(alignment: .leading, spacing: 4) {
+                            VStack(alignment: .leading) {
                                 Text(place.name)
                                     .font(.headline)
-                                    .foregroundColor(.brandText)
                                 Text(place.address)
                                     .font(.subheadline)
-                                    .foregroundColor(.gray)
                             }
+                            .padding(.vertical)
                         }
-                        .padding(.vertical, 8)
-                        .listRowBackground(Color.clear)
                         .onTapGesture {
-                            // Acción futura
+                            selectedPlace = place
                         }
                     }
-                    .listStyle(.plain)
-                    .background(Color.clear)
 
                     Button(action: {
                         showingMap = true
-                    }, label: {
+                    }) {
                         Text("Ver Mapa")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.brandRed)
-                            .cornerRadius(12)
-                    })
-                    .padding(.horizontal)
+                            .background(Color.brandButtonBackground)
+                            .cornerRadius(10)
+                    }
+                    .padding()
                     .sheet(isPresented: $showingMap) {
-                        MapView(places: racquetballPlaces, selectedPlace: $selectedPlace) {
+                        MapView(places: viewModel.racquetballPlaces, selectedPlace: $selectedPlace) {
                             showingMap = false
                         }
                     }
                 }
-                .padding(.top)
             }
-            .navigationTitle("¿Dónde practicar?")
+            .navigationBarTitle("¿Dónde practicar?", displayMode: .automatic)
             .onAppear {
-                loadPlacesFromJSON()
-            }
-        }
-    }
-
-    func loadPlacesFromJSON() {
-        if let url = Bundle.main.url(forResource: "places", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                racquetballPlaces = try decoder.decode([PlaceAnnotation].self, from: data)
-            } catch {
-                print("Error decoding JSON: \(error)")
+                viewModel.fetchPlaces()
             }
         }
     }
 }
+
 
 struct MapView: View {
     var places: [PlaceAnnotation]
