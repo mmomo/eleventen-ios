@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000B35AC2DB32353009DA81B /* ClubsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B35AB2DB3234E009DA81B /* ClubsViewModel.swift */; };
+		000B35AE2DB3242A009DA81B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B35AD2DB32426009DA81B /* MapView.swift */; };
 		001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F02BDCB0F800F42A50 /* ProgramsListView.swift */; };
 		001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */; };
 		001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */; };
@@ -86,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000B35AB2DB3234E009DA81B /* ClubsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewModel.swift; sourceTree = "<group>"; };
+		000B35AD2DB32426009DA81B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		001194F02BDCB0F800F42A50 /* ProgramsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListView.swift; sourceTree = "<group>"; };
 		001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
 		001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillsPerDayView.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		001194EC2BDCB06C00F42A50 /* Clubs */ = {
 			isa = PBXGroup;
 			children = (
+				000B35AD2DB32426009DA81B /* MapView.swift */,
+				000B35AB2DB3234E009DA81B /* ClubsViewModel.swift */,
 				007D831D2BE2D7BE009E4D22 /* ClubsModel.swift */,
 				007D831F2BE2D82A009E4D22 /* ClubsView.swift */,
 			);
@@ -588,8 +594,10 @@
 				5300579C2DA2526A0091105B /* DashboardView.swift in Sources */,
 				007D83062BE29CB6009E4D22 /* ProgramModel.swift in Sources */,
 				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
+				000B35AC2DB32353009DA81B /* ClubsViewModel.swift in Sources */,
 				001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */,
 				53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */,
+				000B35AE2DB3242A009DA81B /* MapView.swift in Sources */,
 				5308C9A82C86787C00420692 /* StoreManager.swift in Sources */,
 				001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */,
 				007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */,
