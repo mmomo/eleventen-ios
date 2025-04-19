@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000B35442DB1E4B6009DA81B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000B352B2DB1D0C2009DA81B /* WidgetKit.framework */; };
+		000B35452DB1E4B6009DA81B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000B352D2DB1D0C2009DA81B /* SwiftUI.framework */; };
+		000B35502DB1E4B8009DA81B /* ScoreComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		000B356E2DB2D769009DA81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000B356D2DB2D769009DA81B /* LaunchScreen.storyboard */; };
 		001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F02BDCB0F800F42A50 /* ProgramsListView.swift */; };
 		001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */; };
 		001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */; };
@@ -48,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		000B354E2DB1E4B8009DA81B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53A05E1D2B8569B700D3447B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000B35422DB1E4B6009DA81B;
+			remoteInfo = ScoreComplicationExtension;
+		};
 		00600B5E2DA4B16000224282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53A05E1D2B8569B700D3447B /* Project object */;
@@ -72,6 +83,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		000B353E2DB1D0C5009DA81B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				000B35502DB1E4B8009DA81B /* ScoreComplicationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00600B612DA4B16000224282 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +108,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000B352B2DB1D0C2009DA81B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		000B352D2DB1D0C2009DA81B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScoreComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		000B35552DB1E963009DA81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		000B356D2DB2D769009DA81B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		001194F02BDCB0F800F42A50 /* ProgramsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListView.swift; sourceTree = "<group>"; };
 		001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
 		001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillsPerDayView.swift; sourceTree = "<group>"; };
@@ -129,11 +156,54 @@
 		53D9493A2C82B0AC00D0F2CC /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		000B35512DB1E4B8009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 000B35422DB1E4B6009DA81B /* ScoreComplicationExtension */;
+		};
+		000B35672DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Technology-Bold.ttf",
+				"Technology-BoldItalic.ttf",
+				"Technology-Italic.ttf",
+				Technology.ttf,
+			);
+			target = 00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */;
+		};
+		000B35682DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Technology-Bold.ttf",
+				"Technology-BoldItalic.ttf",
+				"Technology-Italic.ttf",
+				Technology.ttf,
+			);
+			target = 000B35422DB1E4B6009DA81B /* ScoreComplicationExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		000B352F2DB1D0C2009DA81B /* ScoreComplication */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ScoreComplication; sourceTree = "<group>"; };
+		000B35462DB1E4B6009DA81B /* ScoreComplication */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (000B35512DB1E4B8009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScoreComplication; sourceTree = "<group>"; };
+		000B35562DB1ECB6009DA81B /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (000B35672DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 000B35682DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
+		000B35692DB2C801009DA81B /* ColorsExtensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ColorsExtensions; sourceTree = "<group>"; };
 		00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "ElevenTenWatch Watch App"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		000B35402DB1E4B6009DA81B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000B35452DB1E4B6009DA81B /* SwiftUI.framework in Frameworks */,
+				000B35442DB1E4B6009DA81B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00600B502DA4B15C00224282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +236,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000B352A2DB1D0C2009DA81B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000B352B2DB1D0C2009DA81B /* WidgetKit.framework */,
+				000B352D2DB1D0C2009DA81B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		001194EB2BDCB05F00F42A50 /* Training */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +294,8 @@
 		007D83042BE2966A009E4D22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				000B35692DB2C801009DA81B /* ColorsExtensions */,
+				000B35562DB1ECB6009DA81B /* Fonts */,
 				007D83232BE30F04009E4D22 /* JsonFilesConfig */,
 				007D83072BE2BB94009E4D22 /* videos */,
 			);
@@ -291,11 +372,15 @@
 		53A05E1C2B8569B700D3447B = {
 			isa = PBXGroup;
 			children = (
+				000B356D2DB2D769009DA81B /* LaunchScreen.storyboard */,
 				53025F6E2DA0CAA300A786BE /* ElevenTenTestPlan.xctestplan */,
 				53A05E272B8569B700D3447B /* ElevenTen */,
 				53A05E382B8569B800D3447B /* ElevenTenTests */,
 				53A05E422B8569B800D3447B /* ElevenTenUITests */,
 				00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */,
+				000B352F2DB1D0C2009DA81B /* ScoreComplication */,
+				000B35462DB1E4B6009DA81B /* ScoreComplication */,
+				000B352A2DB1D0C2009DA81B /* Frameworks */,
 				53A05E262B8569B700D3447B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -307,6 +392,7 @@
 				53A05E352B8569B800D3447B /* ElevenTenTests.xctest */,
 				53A05E3F2B8569B800D3447B /* ElevenTenUITests.xctest */,
 				00600B532DA4B15C00224282 /* ElevenTenWatch Watch App.app */,
+				000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,6 +400,7 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				000B35552DB1E963009DA81B /* Info.plist */,
 				536CE0022C89189700EE7D15 /* Store */,
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
@@ -369,6 +456,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		000B35422DB1E4B6009DA81B /* ScoreComplicationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000B35522DB1E4B8009DA81B /* Build configuration list for PBXNativeTarget "ScoreComplicationExtension" */;
+			buildPhases = (
+				000B353F2DB1E4B6009DA81B /* Sources */,
+				000B35402DB1E4B6009DA81B /* Frameworks */,
+				000B35412DB1E4B6009DA81B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				000B35462DB1E4B6009DA81B /* ScoreComplication */,
+			);
+			name = ScoreComplicationExtension;
+			packageProductDependencies = (
+			);
+			productName = ScoreComplicationExtension;
+			productReference = 000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00600B642DA4B16000224282 /* Build configuration list for PBXNativeTarget "ElevenTenWatch Watch App" */;
@@ -376,10 +485,12 @@
 				00600B4F2DA4B15C00224282 /* Sources */,
 				00600B502DA4B15C00224282 /* Frameworks */,
 				00600B512DA4B15C00224282 /* Resources */,
+				000B353E2DB1D0C5009DA81B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				000B354F2DB1E4B8009DA81B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */,
@@ -405,6 +516,10 @@
 			);
 			dependencies = (
 				00600B5F2DA4B16000224282 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				000B35562DB1ECB6009DA81B /* Fonts */,
+				000B35692DB2C801009DA81B /* ColorsExtensions */,
 			);
 			name = ElevenTen;
 			productName = ElevenTen;
@@ -457,6 +572,9 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					000B35422DB1E4B6009DA81B = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					00600B522DA4B15C00224282 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -493,11 +611,19 @@
 				53A05E342B8569B800D3447B /* ElevenTenTests */,
 				53A05E3E2B8569B800D3447B /* ElevenTenUITests */,
 				00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */,
+				000B35422DB1E4B6009DA81B /* ScoreComplicationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		000B35412DB1E4B6009DA81B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00600B512DA4B15C00224282 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +644,7 @@
 				534DEFB12C8E2A6000E53EFA /* Subscriptions.plist in Resources */,
 				007D83152BE2CEA9009E4D22 /* coordinacionOjoMano.mp4 in Resources */,
 				007D830B2BE2C297009E4D22 /* controlToquesHaciaArriba.mp4 in Resources */,
+				000B356E2DB2D769009DA81B /* LaunchScreen.storyboard in Resources */,
 				007D83112BE2C945009E4D22 /* controlEnCortoReves.mp4 in Resources */,
 				53A05E2D2B8569B800D3447B /* Assets.xcassets in Resources */,
 				007D831A2BE2D2D7009E4D22 /* controlTechoDerecha.mp4 in Resources */,
@@ -564,6 +691,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		000B353F2DB1E4B6009DA81B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00600B4F2DA4B15C00224282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,6 +752,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		000B354F2DB1E4B8009DA81B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000B35422DB1E4B6009DA81B /* ScoreComplicationExtension */;
+			targetProxy = 000B354E2DB1E4B8009DA81B /* PBXContainerItemProxy */;
+		};
 		00600B5F2DA4B16000224282 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00600B522DA4B15C00224282 /* ElevenTenWatch Watch App */;
@@ -636,6 +775,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		000B35532DB1E4B8009DA81B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W89YVYQENL;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScoreComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScoreComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen.watchkitapp.ScoreComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		000B35542DB1E4B8009DA81B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W89YVYQENL;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScoreComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScoreComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eleventen.inc.app.ElevenTen.watchkitapp.ScoreComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		00600B622DA4B16000224282 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -831,12 +1034,14 @@
 				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElevenTen/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -868,12 +1073,14 @@
 				DEVELOPMENT_TEAM = W89YVYQENL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElevenTen/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -980,6 +1187,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		000B35522DB1E4B8009DA81B /* Build configuration list for PBXNativeTarget "ScoreComplicationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000B35532DB1E4B8009DA81B /* Debug */,
+				000B35542DB1E4B8009DA81B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00600B642DA4B16000224282 /* Build configuration list for PBXNativeTarget "ElevenTenWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

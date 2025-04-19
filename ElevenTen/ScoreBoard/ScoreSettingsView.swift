@@ -1,75 +1,111 @@
-//
-//  ScoreSettingsView.swift
-//  ElevenTen
-//
-//  Created by Jorge Romo on 01/05/24.
-//
-
-import Foundation
 import SwiftUI
 
 struct ScoreSettingsView: View {
-    @State private var numberOfSets: Int = 3
     @State private var player1Name: String = ""
     @State private var player2Name: String = ""
-    @State private var instructionText: String = """
-    Para aumentar el marcador, haz un gesto swipe hacia arriba. \
-    Para disminuir, haz un swipe hacia abajo. Para indicar quién tiene el servicio, \
-    toca el nombre del jugador.
-    """
-    
     @State private var showingScoreBoard = false
 
     var body: some View {
         NavigationView {
-            VStack {
-                // Number of Sets
-                Picker(selection: $numberOfSets, label: Text("Número de Sets")) {
-                    Text("3 Sets").tag(3)
-                    Text("5 Sets").tag(5)
+            ZStack {
+                Color.white
+                    .onTapGesture { hideKeyboard() }
+
+                VStack(spacing: 20) {
+                    // Introducción
+                    HStack {
+                        Text("Introduce los nombres de los jugadores")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 20)
+
+                    // TextFields
+                    Group {
+                        TextField("Nombre del Jugador 1", text: $player1Name)
+                        TextField("Nombre del Jugador 2", text: $player2Name)
+                    }
+                    .padding()
+                    .frame(height: 55)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(12)
+                    .padding(.horizontal)
+                    .foregroundColor(.black)
+
+                    // Instrucciones
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Instrucciones de uso")
+                                .font(.headline)
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 16) {
+                                InstructionStep(imageName: "arrow.up", description: "Swipe arriba\n+1 punto")
+                                InstructionStep(imageName: "arrow.down", description: "Swipe abajo\n-1 punto")
+                                InstructionStep(imageName: "person.crop.circle", description: "Toca el nombre\npara servicio")
+                                InstructionStep(imageName: "app.badge", description: "Toca el logo\npara más opciones")
+                                InstructionStep(imageName: "applewatch", description: "Controla desde\nApple Watch")
+                            }
+                            .padding(.horizontal)
+                        }
+                    }
+
+                    // Botón comenzar
+                    Button(action: {
+                        showingScoreBoard = true
+                    }) {
+                        Text("Comenzar")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.brandRed)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+
+                    Spacer()
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                
-                // Player 1 Name
-                TextField("Nombre del Jugador 1", text: $player1Name)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                // Player 2 Name
-                TextField("Nombre del Jugador 2", text: $player2Name)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                // Instruction Text
-                Text(instructionText)
-                    .padding()
-                
-                // Comenzar Button
-                Button(action: {
-                    showingScoreBoard = true
-                }, label: {
-                    Text("Comenzar")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })
-                .padding()
+                .navigationBarTitle(Text("Marcador"), displayMode: .automatic)
                 .fullScreenCover(isPresented: $showingScoreBoard) {
                     ScoreBoardView(player1Name: player1Name, player2Name: player2Name)
                 }
-                
-                Spacer()
             }
-            .navigationBarTitle(Text("Marcador"), displayMode: .inline)
         }
+    }
+
+    private func hideKeyboard() {
+        #if canImport(UIKit)
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        #endif
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScoreSettingsView()
+struct InstructionStep: View {
+    let imageName: String
+    let description: String
+
+    var body: some View {
+        VStack(spacing: 8) {
+            Image(systemName: imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50)
+                .foregroundColor(.brandRed)
+
+            Text(description)
+                .font(.caption)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
+                .frame(height: 40)
+        }
+        .frame(width: 120, height: 140)
+        .padding()
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(12)
     }
 }
