@@ -11,6 +11,7 @@
 		000B35452DB1E4B6009DA81B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000B352D2DB1D0C2009DA81B /* SwiftUI.framework */; };
 		000B35502DB1E4B8009DA81B /* ScoreComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		000B356E2DB2D769009DA81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000B356D2DB2D769009DA81B /* LaunchScreen.storyboard */; };
+		000B35FB2DB328DE009DA81B /* ClubsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B35FA2DB328D5009DA81B /* ClubsViewModel.swift */; };
 		001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F02BDCB0F800F42A50 /* ProgramsListView.swift */; };
 		001194F32BDCB12D00F42A50 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */; };
 		001194F52BDCB19A00F42A50 /* DrillsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */; };
@@ -113,6 +114,7 @@
 		000B35432DB1E4B6009DA81B /* ScoreComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScoreComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		000B35552DB1E963009DA81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		000B356D2DB2D769009DA81B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		000B35FA2DB328D5009DA81B /* ClubsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewModel.swift; sourceTree = "<group>"; };
 		001194F02BDCB0F800F42A50 /* ProgramsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListView.swift; sourceTree = "<group>"; };
 		001194F22BDCB12D00F42A50 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
 		001194F42BDCB19A00F42A50 /* DrillsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillsPerDayView.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		001194EC2BDCB06C00F42A50 /* Clubs */ = {
 			isa = PBXGroup;
 			children = (
+				000B35FA2DB328D5009DA81B /* ClubsViewModel.swift */,
 				007D831D2BE2D7BE009E4D22 /* ClubsModel.swift */,
 				007D831F2BE2D82A009E4D22 /* ClubsView.swift */,
 			);
@@ -724,6 +727,7 @@
 				007D831E2BE2D7BE009E4D22 /* ClubsModel.swift in Sources */,
 				001194F72BDCB24F00F42A50 /* DrillDetailView.swift in Sources */,
 				53A05E292B8569B700D3447B /* ElevenTenApp.swift in Sources */,
+				000B35FB2DB328DE009DA81B /* ClubsViewModel.swift in Sources */,
 				5308C9A82C86787C00420692 /* StoreManager.swift in Sources */,
 				001194F12BDCB0F800F42A50 /* ProgramsListView.swift in Sources */,
 				007D83202BE2D82A009E4D22 /* ClubsView.swift in Sources */,
