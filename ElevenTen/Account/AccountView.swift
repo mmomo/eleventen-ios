@@ -9,7 +9,27 @@ struct AccountView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
+                if store.hasActiveSubscription() {
+                    Text("Pro user")
+                        .font(.title2)
+                        .padding(.top, 10)
+                } else {
+                    Text("Free user")
+                        .font(.title2)
+                        .padding(.top, 10)
+                }
 
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+
+                Spacer()
+
+                StoreView(ids: store.subscriptionIDs.values)
+                    .productViewStyle(.compact)
+                    .storeButton(.visible, for: .restorePurchases)
+                
                 // Botón de iniciar sesión
                 Button(action: {
                     showLogin = true
@@ -35,27 +55,6 @@ struct AccountView: View {
                         .background(Color.brandButtonBackground)
                         .cornerRadius(10)
                 }
-
-                if store.hasActiveSubscription() {
-                    Text("Pro user")
-                        .font(.title2)
-                        .padding(.top, 10)
-                } else {
-                    Text("Free user")
-                        .font(.title2)
-                        .padding(.top, 10)
-                }
-
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
-
-                Spacer()
-
-                StoreView(ids: store.subscriptionIDs.values)
-                    .productViewStyle(.compact)
-                    .storeButton(.visible, for: .restorePurchases)
             }
             .padding()
             .navigationBarTitle(Text("Cuenta"), displayMode: .inline)
