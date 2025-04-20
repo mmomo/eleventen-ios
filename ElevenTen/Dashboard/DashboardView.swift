@@ -1,131 +1,115 @@
 import SwiftUI
 
 struct DashboardView: View {
-    @ObservedObject var viewModel: DashboardViewModel
+    @StateObject var viewModel = DashboardViewModel()
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 20) {
-                    Spacer().frame(height: 5)
+                VStack(alignment: .leading, spacing: 24) {
 
-                    HStack {
-                        Text("Welcome {{user}} 👋")
-                            .foregroundColor(.brandText)
-                        Spacer()
-                    }
+                    Text("Welcome 👋")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.brandText)
 
                     if let currentProgram = viewModel.currentProgram {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Continue")
-                                .fontWeight(.heavy)
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Continue Program")
+                                .font(.headline)
                                 .foregroundColor(.brandText)
 
+                            let title = currentProgram.programName
+                            let subtitle = currentProgram.duration
+
                             NavigationLink(destination: ProgramDetailView(program: currentProgram)) {
-                                CellView(program: currentProgram)
-                                    .frame(width: 300, height: 250)
+                                CardView(title: title, subtitle: subtitle)
                             }
                         }
                     }
 
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Programs")
-                            .fontWeight(.heavy)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("All Programs")
+                            .font(.headline)
                             .foregroundColor(.brandText)
-
-                        Text("Created to help you improve your racquet skills and prepare for new challenges.")
-                            .italic()
-                            .foregroundColor(.gray)
 
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 16) {
-                                ForEach(viewModel.programs, id: \.programName) { program in
-                                    CellView(program: program)
-                                        .frame(width: 200, height: 150)
+                                let programs = viewModel.programs
+                                ForEach(viewModel.programs, id: \.id) { program in
+                                    let title = program.programName
+                                    let subtitle = program.level
+
+                                    NavigationLink(destination: ProgramDetailView(program: program)) {
+                                        CardView(title: title, subtitle: subtitle)
+                                    }
                                 }
                             }
                         }
                     }
 
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Workouts")
-                            .fontWeight(.heavy)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Today's Workouts")
+                            .font(.headline)
                             .foregroundColor(.brandText)
 
-                        ForEach(viewModel.getDrillsForToday().prefix(5), id: \.id) { drill in
-
-                            WorkoutMiniView(drill: drill)
+                        let drills = viewModel.getDrillsForToday().prefix(5)
+                        ForEach(drills, id: \.id) { drill in
+                            DrillCardView(drill: drill)
                         }
+
                     }
 
-                    Spacer()
+                    Spacer(minLength: 40)
                 }
                 .padding()
-                .background(Color.brandBackground)
             }
-            .navigationTitle("Inicio")
-            .navigationBarTitleDisplayMode(.automatic)
             .background(Color.brandBackground.ignoresSafeArea())
+            .navigationTitle("Inicio")
         }
     }
 }
 
-struct CellView: View {
-    let program: Program
+struct CardView: View {
+    let title: String
+    let subtitle: String
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Image("racquetball_program")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity)
-                .clipped()
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
 
-            LinearGradient(
-                gradient: Gradient(colors: [Color.black.opacity(0.7), Color.clear]),
-                startPoint: .bottom,
-                endPoint: .top
-            )
-            .frame(height: 80)
-
-            HStack {
-                Text(program.programName)
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .padding()
-                Spacer()
-            }
+            Text(subtitle)
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.8))
         }
+        .padding()
+        .frame(width: 220, height: 120)
+        .background(LinearGradient(colors: [.brandRed, .brandBlack], startPoint: .topLeading, endPoint: .bottomTrailing))
         .clipShape(RoundedRectangle(cornerRadius: 20))
+        .shadow(radius: 4)
     }
 }
 
-struct WorkoutMiniView: View {
+struct DrillCardView: View {
     let drill: Drill
 
     var body: some View {
-        HStack(spacing: 12) {
-            Image("racquetball_man")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 60, height: 60)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+        VStack(alignment: .leading, spacing: 8) {
+            Text(drill.title)
+                .font(.headline)
+                .foregroundColor(.brandText)
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(drill.title)
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.brandText)
-                Text(drill.description)
-                    .font(.footnote)
-                    .lineLimit(1)
-                    .foregroundColor(.gray)
-            }
-            Spacer()
+            Text(drill.description ?? "")
+                .font(.subheadline)
+                .foregroundColor(.brandSecondaryText)
+                .lineLimit(2)
         }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color.brandListBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
     }
-}
-
-#Preview {
-    DashboardView(viewModel: DashboardViewModel())
 }

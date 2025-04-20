@@ -11,42 +11,42 @@ import SwiftUI
 class DashboardViewModel: ObservableObject {
     @Published var programs: [Program] = []
     @Published var currentProgram: Program?
-    
-    init(jsonData: Data? = nil) {
-        if let jsonData = jsonData {
-            loadProgramsFrom(jsonData: jsonData)
-        } else {
-            loadProgramsFromBundle()
-        }
+
+    init() {
+        fetchProgramsFromAPI()
     }
-    
-    private func loadProgramsFromBundle() {
-        if let fileUrl = Bundle.main.url(forResource: "programs", withExtension: "json"),
-           let jsonData = try? Data(contentsOf: fileUrl) {
-            loadProgramsFrom(jsonData: jsonData)
-        } else {
-            print("Failed to load file from bundle")
+
+    func fetchProgramsFromAPI() {
+        guard let url = URL(string: "https://eleventenbackend.onrender.com/api/programs") else {
+            print("❌ URL inválida")
+            return
         }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("❌ Error en fetch: \(error.localizedDescription)")
+                return
+            }
+
+            guard let data = data else {
+                print("❌ No data recibida")
+                return
+            }
+
+            do {
+                let programs = try JSONDecoder().decode([Program].self, from: data)
+                DispatchQueue.main.async {
+                    self.programs = programs
+                    self.currentProgram = programs.first
+                }
+            } catch {
+                print("❌ Error al decodificar: \(error)")
+            }
+
+        }.resume()
     }
-    
-    private func loadProgramsFrom(jsonData: Data) {
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: jsonData) as? [String: Any]
-            let programsArray = jsonObject?["programs"] as? [[String: Any]] ?? []
-            let decodedPrograms = try JSONDecoder().decode([Program].self,
-                                                           from: JSONSerialization.data(withJSONObject: programsArray))
-            self.programs = decodedPrograms
-            self.currentProgram = decodedPrograms.first
-        } catch {
-            print("Decoding error: \(error)")
-        }
-    }
-    
+
     func getDrillsForToday() -> [Drill] {
-        if let drills = self.programs.first?.days.first?.drills {
-            return drills
-        } else {
-            return []
-        }
+        return programs.first?.days.first?.drills ?? []
     }
 }
