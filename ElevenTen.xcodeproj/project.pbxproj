@@ -193,6 +193,8 @@
 		000B35462DB1E4B6009DA81B /* ScoreComplication */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (000B35512DB1E4B8009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScoreComplication; sourceTree = "<group>"; };
 		000B35562DB1ECB6009DA81B /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (000B35672DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 000B35682DB1ECC9009DA81B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
 		000B35692DB2C801009DA81B /* ColorsExtensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ColorsExtensions; sourceTree = "<group>"; };
+		000B36292DB42975009DA81B /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
+		000B36332DB42B27009DA81B /* Register */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Register; sourceTree = "<group>"; };
 		00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "ElevenTenWatch Watch App"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -403,6 +405,8 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				000B36332DB42B27009DA81B /* Register */,
+				000B36292DB42975009DA81B /* Login */,
 				000B35552DB1E963009DA81B /* Info.plist */,
 				536CE0022C89189700EE7D15 /* Store */,
 				007D83042BE2966A009E4D22 /* Resources */,
@@ -523,6 +527,8 @@
 			fileSystemSynchronizedGroups = (
 				000B35562DB1ECB6009DA81B /* Fonts */,
 				000B35692DB2C801009DA81B /* ColorsExtensions */,
+				000B36292DB42975009DA81B /* Login */,
+				000B36332DB42B27009DA81B /* Register */,
 			);
 			name = ElevenTen;
 			productName = ElevenTen;
