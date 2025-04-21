@@ -195,6 +195,7 @@
 		000B35692DB2C801009DA81B /* ColorsExtensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ColorsExtensions; sourceTree = "<group>"; };
 		000B36292DB42975009DA81B /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
 		000B36332DB42B27009DA81B /* Register */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Register; sourceTree = "<group>"; };
+		000B363D2DB55372009DA81B /* News */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = News; sourceTree = "<group>"; };
 		00600B542DA4B15C00224282 /* ElevenTenWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "ElevenTenWatch Watch App"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -279,13 +280,6 @@
 				007D83242BE30F77009E4D22 /* ScoreSettingsView.swift */,
 			);
 			path = ScoreBoard;
-			sourceTree = "<group>";
-		};
-		001194EE2BDCB09600F42A50 /* News */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = News;
 			sourceTree = "<group>";
 		};
 		001194EF2BDCB0A000F42A50 /* Account */ = {
@@ -405,6 +399,7 @@
 		53A05E272B8569B700D3447B /* ElevenTen */ = {
 			isa = PBXGroup;
 			children = (
+				000B363D2DB55372009DA81B /* News */,
 				000B36332DB42B27009DA81B /* Register */,
 				000B36292DB42975009DA81B /* Login */,
 				000B35552DB1E963009DA81B /* Info.plist */,
@@ -412,7 +407,6 @@
 				007D83042BE2966A009E4D22 /* Resources */,
 				001194EF2BDCB0A000F42A50 /* Account */,
 				5300579A2DA252450091105B /* Dashboard */,
-				001194EE2BDCB09600F42A50 /* News */,
 				001194ED2BDCB08700F42A50 /* ScoreBoard */,
 				001194EC2BDCB06C00F42A50 /* Clubs */,
 				001194EB2BDCB05F00F42A50 /* Training */,
@@ -529,6 +523,7 @@
 				000B35692DB2C801009DA81B /* ColorsExtensions */,
 				000B36292DB42975009DA81B /* Login */,
 				000B36332DB42B27009DA81B /* Register */,
+				000B363D2DB55372009DA81B /* News */,
 			);
 			name = ElevenTen;
 			productName = ElevenTen;

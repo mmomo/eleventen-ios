@@ -38,7 +38,7 @@ struct MainView: View {
                     Label("Marcador", systemImage: "sportscourt")
                 }
 
-            Text("Noticias")
+            NewsListView()
                 .tabItem {
                     Label("Noticias", systemImage: "newspaper")
                 }

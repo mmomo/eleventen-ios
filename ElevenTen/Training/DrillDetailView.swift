@@ -1,73 +1,100 @@
-//
-//  DrillDetailView.swift
-//  ElevenTen
-//
-//  Created by Jorge Romo on 26/04/24.
-//
-
 import SwiftUI
 import AVKit
 
 struct DrillDetailView: View {
     let drill: Drill
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            if drill.type == "lista_videos" {
-                ForEach(drill.videos ?? [], id: \.title) { video in
-                    NavigationLink(destination: VideoPlayerView(videoURL: video.videoUrl, videoTitle: video.title)) {
-                        Text(video.title)
-                            .font(.headline)
-                    }
-                    .navigationBarTitle(Text(drill.title), displayMode: .inline)
-                }
-            } else if drill.type == "descripcion_video" {
-                VideoPlayerView(videoURL: drill.videoUrl ?? "", videoTitle: drill.title, videoDescription: drill.description)
-            } else if drill.type == "titulo_descripcion_imagen" {
-                DrillWithImageDetailView(drill: drill)
-            }
-        }
-        .padding()
-    }
-}
 
-struct DrillWithImageDetailView: View {
-    let drill: Drill
-    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                VStack(alignment: .leading, spacing: 10) {
+                // Title & Description Card
+                VStack(alignment: .leading, spacing: 12) {
                     Text(drill.title)
                         .font(.title2)
                         .fontWeight(.bold)
-                        .foregroundColor(.primary)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(2)
-                    
-                    Text(drill.description)
-                        .font(.body)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.leading)
+                        .foregroundColor(.brandText)
+
+                    if let description = drill.description {
+                        Text(description)
+                            .font(.body)
+                            .foregroundColor(.brandSecondaryText)
+                    }
                 }
-                .padding(.horizontal) // Agregamos padding horizontal al texto
-                
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.brandListBackground)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
+                .padding(.horizontal)
+
+                // Image Card
                 if let imageName = drill.imageUrl {
                     Image(imageName)
                         .resizable()
+                        .scaledToFill()
                         .frame(maxWidth: .infinity)
-                        .frame(height: 350)
+                        .frame(height: 250)
+                        .clipped()
+                        .cornerRadius(16)
+                        .padding(.horizontal)
                 }
-                                              
-                if let videoPath = Bundle.main.path(forResource: drill.videoUrl, ofType: "mp4") {
-                    let videoURL = URL(fileURLWithPath: videoPath)
-                    VideoPlayer(player: AVPlayer(url: videoURL))
-                        .frame(height: 350)
+
+                // Video Card
+                if let videoUrl = drill.videoUrl, let path = Bundle.main.path(forResource: videoUrl, ofType: "mp4") {
+                    let url = URL(fileURLWithPath: path)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Video de ejemplo")
+                            .font(.headline)
+                            .foregroundColor(.brandText)
+
+                        VideoPlayer(player: AVPlayer(url: url))
+                            .frame(height: 250)
+                            .cornerRadius(16)
+                    }
+                    .padding()
+                    .background(Color.brandListBackground)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
+                    .padding(.horizontal)
                 }
+
+                // Lista de videos (tipo lista_videos)
+                if drill.type == "lista_videos" {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                        ForEach(drill.videos ?? [], id: \.title) { video in
+                            NavigationLink(destination: VideoPlayerView(videoURL: video.videoUrl, videoTitle: video.title)) {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Image("racquetball_man")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(height: 100)
+                                        .frame(maxWidth: .infinity)
+                                        .clipped()
+                                        .cornerRadius(12)
+
+                                    Text(video.title)
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                        .foregroundColor(.brandText)
+                                        .lineLimit(2)
+                                }
+                                .padding()
+                                .background(Color.brandListBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+
+                Spacer(minLength: 40)
             }
-            .padding()
+            .padding(.vertical)
         }
-        .navigationBarTitle(Text(drill.title), displayMode: .inline)
+        .background(Color.brandBackground.ignoresSafeArea())
+        .navigationTitle(drill.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -75,16 +102,25 @@ struct VideoPlayerView: View {
     var videoURL: String
     var videoTitle: String
     var videoDescription: String?
-    
+
     var body: some View {
-        VStack {
-            Text(videoDescription ?? "")
-            if let videoPath = Bundle.main.path(forResource: videoURL, ofType: "mp4") {
-                let videoURL = URL(fileURLWithPath: videoPath)
-                VideoPlayer(player: AVPlayer(url: videoURL))
-                    .frame(height: 350)
+        VStack(spacing: 20) {
+            if let description = videoDescription {
+                Text(description)
+                    .font(.body)
+                    .foregroundColor(.brandSecondaryText)
+                    .padding(.horizontal)
+            }
+
+            if let path = Bundle.main.path(forResource: videoURL, ofType: "mp4") {
+                let url = URL(fileURLWithPath: path)
+                VideoPlayer(player: AVPlayer(url: url))
+                    .frame(height: 250)
+                    .cornerRadius(16)
             }
         }
-        .navigationBarTitle(Text(videoTitle), displayMode: .inline)
+        .navigationTitle(videoTitle)
+        .navigationBarTitleDisplayMode(.inline)
+        .background(Color.brandBackground.ignoresSafeArea())
     }
 }

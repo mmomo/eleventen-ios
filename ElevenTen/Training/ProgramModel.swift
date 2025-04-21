@@ -8,47 +8,69 @@
 import Foundation
 
 struct Program: Codable {
+    let id: String
     let programName: String
     let duration: String
     let level: String
     let days: [Day]
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case programName
+        case duration
+        case level
+        case days
+    }
 }
 
 struct Day: Identifiable, Codable, Hashable, Equatable {
-    var id: String
+    let id: String
     let dayName: String
     let drills: [Drill]
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case dayName
+        case drills
+    }
+
     static func == (lhs: Day, rhs: Day) -> Bool {
-          return lhs.id == rhs.id
-      }
-    
+        lhs.id == rhs.id
+    }
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
 }
 
 struct Drill: Identifiable, Codable, Hashable, Equatable {
-    var id: String
+    let id: String
     let type: String
     let title: String
-    let description: String
+    let description: String?
     let imageUrl: String?
     let videoUrl: String?
     let videos: [Video]?
-    
-    // Conformidad a Hashable
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(type)
-        hasher.combine(title)
-        hasher.combine(description)
-        hasher.combine(imageUrl)
-        hasher.combine(videoUrl)
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case type
+        case title
+        case description
+        case imageUrl
+        case videoUrl
+        case videos
     }
-    
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
     static func == (lhs: Drill, rhs: Drill) -> Bool {
-          return lhs.id == rhs.id
-      }
+        lhs.id == rhs.id
+    }
 }
+
 
 struct Video: Codable {
     let title: String
