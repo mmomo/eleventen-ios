@@ -2,6 +2,7 @@ import SwiftUI
 import MapKit
 
 struct ClubsView: View {
+    
     @StateObject private var viewModel = ClubsViewModel()
     @State private var selectedPlace: PlaceAnnotation?
     @State private var showingMap = false
