@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "Court.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "s42.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },

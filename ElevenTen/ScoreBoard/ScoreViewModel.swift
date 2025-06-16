@@ -23,7 +23,7 @@ class ScoreViewModel: NSObject, ObservableObject, WCSessionDelegate {
 
     private var timeoutTimer: Timer?
 
-    let sponsorImages = ["sponsor0", "sponsor1", "sponsor2", "sponsor3", "sponsor4"]
+    let sponsorImages = ["sponsor0", "sponsor1", "sponsor2", "sponsor3", "sponsor4", "sponsor5", "sponsor6", "sponsor7"]
 
     var currentSponsor: String {
         sponsorImages[currentSponsorIndex % sponsorImages.count]

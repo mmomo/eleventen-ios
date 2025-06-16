@@ -4,6 +4,7 @@ struct ScoreSettingsView: View {
     @State private var player1Name: String = ""
     @State private var player2Name: String = ""
     @State private var showingScoreBoard = false
+    @State private var showingPlayBoard = false // Nueva variable
 
     var body: some View {
         NavigationView {
@@ -68,11 +69,24 @@ struct ScoreSettingsView: View {
                             .padding(.horizontal)
                     }
 
+                    // Botón pizarra de jugadas
+                    Button(action: {
+                        showingPlayBoard = true
+                    }) {
+                        Text("Pizarra de jugadas")
+                            .font(.subheadline)
+                            .foregroundColor(.brandRed)
+                            .padding(.top, 8)
+                    }
+
                     Spacer()
                 }
-                .navigationBarTitle(Text("Marcador"), displayMode: .automatic)
+                .navigationBarTitle(Text("Marcador y pizarra"), displayMode: .automatic)
                 .fullScreenCover(isPresented: $showingScoreBoard) {
                     ScoreBoardView(player1Name: player1Name, player2Name: player2Name)
+                }
+                .fullScreenCover(isPresented: $showingPlayBoard) {
+                    PlayBoardView() // Asegúrate de tener esta vista lista
                 }
             }
         }
@@ -84,6 +98,7 @@ struct ScoreSettingsView: View {
         #endif
     }
 }
+
 
 struct InstructionStep: View {
     let imageName: String

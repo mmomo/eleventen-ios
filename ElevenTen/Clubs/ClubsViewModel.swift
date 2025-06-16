@@ -9,7 +9,9 @@ import Foundation
 
 @MainActor
 class ClubsViewModel: ObservableObject {
+    // Variable para guardar los lugares
     @Published var racquetballPlaces: [PlaceAnnotation] = []
+    //
     @Published var isLoading = false
     @Published var errorMessage: String?
 
@@ -24,7 +26,8 @@ class ClubsViewModel: ObservableObject {
 
         Task {
             do {
-                let (data, _) = try await URLSession.shared.data(from: url)
+                let (data, dataResponse) = try await URLSession.shared.data(from: url)
+                print(dataResponse)
                 let decoder = JSONDecoder()
                 let places = try decoder.decode([PlaceAnnotation].self, from: data)
                 racquetballPlaces = places
