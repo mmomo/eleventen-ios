@@ -12,16 +12,18 @@ import ViewInspector
 
 final class DashboardViewTests: XCTestCase {
     func testWelcomeTextExists() throws {
-        let view = DashboardView(viewModel: DashboardViewModel())
+        let view = DashboardView(viewModel: MockDashboardViewModel())
         
-        let text = try view.inspect().find(ViewType.ScrollView.self).vStack().hStack(1).text(0)
+        let navigationStack = try view.inspect().find(ViewType.NavigationStack.self)
         
-        XCTAssertEqual(try text.string(), "Welcome {{user}} 👋")
+        let text = try navigationStack.scrollView(0).vStack().text(0)
+        
+        XCTAssertEqual(try text.string(), "Welcome 👋")
     }
 
     @MainActor func testDashboardShowsContinueWhenCurrentProgramExists() async throws {
         let mockProgram = Program(
-            programName: "Beginner",
+            id: "1", programName: "Beginner",
             duration: "1 week",
             level: "Easy",
             days: [
@@ -38,17 +40,19 @@ final class DashboardViewTests: XCTestCase {
             ]
         )
         
-        let viewModel = DashboardViewModel()
+        let viewModel = MockDashboardViewModel()
         viewModel.programs = [mockProgram]
         viewModel.currentProgram = mockProgram
         
         let sut = DashboardView(viewModel: viewModel)
         
-        let scrollView = try sut.inspect().find(ViewType.ScrollView.self)
+        let navigationStack = try sut.inspect().find(ViewType.NavigationStack.self)
+        
+        let scrollView = try navigationStack.scrollView()
         let vStack = try scrollView.vStack()
         
-        let programsText = try vStack.find(text: "Continue")
-        XCTAssertEqual(try programsText.string(), "Continue")
+        let programsText = try vStack.find(text: "Continue Program")
+        XCTAssertEqual(try programsText.string(), "Continue Program")
     }
 
 }

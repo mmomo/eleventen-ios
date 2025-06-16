@@ -18,51 +18,54 @@ final class DashboardViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testLoadProgramsFromMockJSON() {
-        let mockJSON = """
-        {
-            "programs": [
-                {
-                    "programName": "RB-PROGRAM-1.0",
-                    "duration": "2 Semanas",
-                    "level": "Principiantes",
-                    "days": [
-                        {
-                            "id": "1",
-                            "dayName": "Día 1: Derecha",
-                            "drills": [
-                                {
-                                    "id": "1",
-                                    "type": "lista_videos",
-                                    "title": "A: Control",
-                                    "description": "",
-                                    "imageUrl": null,
-                                    "videoUrl": null,
-                                    "videos": []
-                                }
-                            ]
-                        }
-                    ]
-                }
+    func testInitCallsFetchMethod() {
+        let viewModel = MockDashboardViewModel()
+        
+        XCTAssertTrue(viewModel.fetchProgramsCalled, "fetchProgramsFromAPI() method not called at init")
+        XCTAssertEqual(viewModel.programs.count, 0)
+    }
+    
+    func testWhenProgramExistsReturnsCount() {
+        let viewModel = MockDashboardViewModel()
+        
+        let mockProgram = Program(
+            id: "1", programName: "RB-PROGRAM-1.0",
+            duration: "1 week",
+            level: "Easy",
+            days: [
+                Day(id: "1", dayName: "Day 1",
+                    drills: [
+                        Drill(id: "d1",
+                              type: "warmup",
+                              title: "Basic Drill",
+                              description: "Desc",
+                              imageUrl: nil,
+                              videoUrl: nil,
+                              videos: nil)
+                    ])
             ]
-        }
-        """
-        let jsonData = mockJSON.data(using: .utf8)
+        )
         
-        let viewModel = DashboardViewModel(jsonData: jsonData)
-        
-        XCTAssertEqual(viewModel.programs.count, 1)
+        viewModel.programs = [mockProgram]
+        viewModel.currentProgram = mockProgram
+
         XCTAssertEqual(viewModel.currentProgram?.programName, "RB-PROGRAM-1.0")
-        
         XCTAssertEqual(viewModel.getDrillsForToday().count, 1)
-        XCTAssertEqual(viewModel.getDrillsForToday().first?.title, "A: Control")
     }
     
     func testGetDrillsReturnsEmptyIfNoData() {
-        let viewModel = DashboardViewModel(jsonData: Data())
+        let viewModel = MockDashboardViewModel()
         
         let drills = viewModel.getDrillsForToday()
         
         XCTAssertEqual(drills.count, 0)
+    }
+}
+
+class MockDashboardViewModel: DashboardViewModel {
+    var fetchProgramsCalled = false
+
+    override func fetchProgramsFromAPI() {
+        fetchProgramsCalled = true
     }
 }
